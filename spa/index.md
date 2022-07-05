@@ -10,7 +10,7 @@ Historically, whenever an end-user of a web application would click on a link to
 - a page refresh causes the browser to blink or flash as the DOM is COMPLETELY rebuilt.
 
 ![SPA vs. MPA](/img/spa-mpa-lifecycle.jpeg)
-<span class="caption"><em>(above image swiped from https://lvivity.com/single-page-app-vs-multi-page-app)</em></span>
+<p><em>(above image swiped from https://lvivity.com/single-page-app-vs-multi-page-app)</em></p>
 
 In the above diagram, an MPA must request a page refresh from the web server when data change. An SPA uses AJAX to fetch the data from the server and modifies its DOM. An SPA results in a more efficient use of network bandwidth and faster page updates. SPAs also do not flash or blink since they do not need to rebuild the entire DOM.
 
