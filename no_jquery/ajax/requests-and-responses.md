@@ -99,7 +99,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/charmander')
         });
 ```
 
-This process may seem a little long-winded, and you are not wrong!. `fetch` alternatives like jQuery's `ajax` and `axios` make many vanilla JavaScript tasks, like HTTP requests, simpler and easier to understand. While we are teaching you the basic JavaScript way of performing these tasks, we encourage you to broaden your toolset by playing around with other JavaScript libraries, like jQuery.
+This process may seem a little long-winded, and you are not wrong!!! `fetch` alternatives like jQuery's `ajax` and `axios` make many vanilla JavaScript tasks, like HTTP requests, simpler and easier to understand. While we are teaching you the basic JavaScript way of performing these tasks, we encourage you to broaden your toolset by playing around with other JavaScript libraries, like jQuery.
 
 In addition to `then()`, `fetch` provides two other methods for executing code based after a request has been made.
 
