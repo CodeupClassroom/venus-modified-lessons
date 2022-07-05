@@ -11,6 +11,6 @@
 
 [Fetch](no_jquery/ajax/requests-and-responses.md)
 
-Weather Map: coming soon!
+[Weather Map](no_jquery/ajax/weather-map.md)
 
 Single Page Applications: coming soon!

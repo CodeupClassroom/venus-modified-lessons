@@ -26,45 +26,23 @@ We use `const` to avoid this variables to be reassigned, read more about constan
 
 ## Pulling San Antonio Weather
 
-We can query for San Antonio weather data by sending an ajax `GET` request and including `q: San Antonio, US` like the following:
+We can query for San Antonio weather data by sending a fetch `GET` request and including `q: San Antonio, US` as a query parameter. Note: when you start exploring a new API, it is important to learn what data is sent back from each request. We can explore this information by using `console.log()` inside the `.then()` handler.
+
 
 ```js
-$.get("http://api.openweathermap.org/data/2.5/weather", {
+// prepare the query parameters to identify us to openweather 
+// and give it our weather query
+let queryParams = new URLSearchParams({
     APPID: OPEN_WEATHER_APPID,
-    q:     "San Antonio, US"
+    q: "San Antonio, US"
 });
-```
-
-Remember, there are a lot of different ways we can format this request. All of the following ajax calls are identical to the one above.
-
-```js
-$.ajax({
-    url: "http://api.openweathermap.org/data/2.5/weather",
-    type: "GET",
-    data: {
-        APPID: OPEN_WEATHER_APPID,
-        q:     "San Antonio, US"
+// concat the query parameters onto the URL
+fetch("http://api.openweathermap.org/data/2.5/weather?" + queryParams, {
+    method: "GET"
     }
-});
-
-$.ajax("http://api.openweathermap.org/data/2.5/weather", {
-    data: {
-        APPID: OPEN_WEATHER_APPID,
-        q:     "San Antonio, US"
-    }
-});
-
-$.get("http://api.openweathermap.org/data/2.5/weather?APPID=" + OPEN_WEATHER_APPID + "&q=San+Antonio,+US");
-```
-
-When you start exploring a new API, it is important to learn what data is sent back from each request. We can exploring this information using `console.log()` inside of a `.done()` handler:
-
-```js
-$.get("http://api.openweathermap.org/data/2.5/weather", {
-    APPID: OPEN_WEATHER_APPID,
-    q:     "San Antonio, US"
-}).done(function(data) {
-    console.log(data);
+).then(async function(response) {
+    // use await to wait for the json data and then do something with it
+    console.log(await response.json());
 });
 ```
 
@@ -117,24 +95,38 @@ When we log the data, we will see it is a JSON object like the following:
 Much of this information seems relatively obvious, such as `lat`, `lon`, `country`, etc. Some of the other pieces are less clear. If any part of an API request is confusing, remember to always go back to the [documentation](http://openweathermap.org/weather-data#current). Notice that the temperature is expressed in [Kelvin](http://en.wikipedia.org/wiki/Kelvin). We can change that by passing yet another [parameter](http://openweathermap.org/current#other) to the request.
 
 ```js
-$.get("http://api.openweathermap.org/data/2.5/weather", {
+// prepare the query parameters to identify us to openweather 
+// and give it our weather query
+let queryParams = new URLSearchParams({
     APPID: OPEN_WEATHER_APPID,
-    q:     "San Antonio, US",
+    q: "San Antonio, US",
     units: "imperial"
-}).done(function(data) {
-    console.log(data);
+});
+// concat the query parameters onto the URL
+fetch("http://api.openweathermap.org/data/2.5/weather?" + queryParams, {
+    method: "GET"
+    }
+).then(async function(response) {
+    // use await to wait for the json data and then do something with it
+    console.log(await response.json());
 });
 ```
 
 Our temperature should now be coming back in degrees fahrenheit. Let's look at other ways we can request this information. In particular, from the data we can see that San Antonio has an `id` of "4726206". We can use that to look up weather information as well:
 
 ```js
-$.get("http://api.openweathermap.org/data/2.5/weather", {
+let queryParams = new URLSearchParams({
     APPID: OPEN_WEATHER_APPID,
     id:     4726206,
     units: "imperial"
-}).done(function(data) {
-    console.log(data);
+});
+// concat the query parameters onto the URL
+fetch("http://api.openweathermap.org/data/2.5/weather?" + queryParams, {
+    method: "GET"
+    }
+).then(async function(response) {
+    // use await to wait for the json data and then do something with it
+    console.log(await response.json());
 });
 ```
 
@@ -143,26 +135,38 @@ A list of city ID `city.list.json.gz` can be downloaded [here](http://bulk.openw
 We will get the same information back as before. We can also look information by its latitude and longitude:
 
 ```js
-$.get("http://api.openweathermap.org/data/2.5/weather", {
+let queryParams = new URLSearchParams({
     APPID: OPEN_WEATHER_APPID,
     lat:    29.423017,
     lon:   -98.48527,
     units: "imperial"
-}).done(function(data) {
-    console.log('current weather', data);
+});
+// concat the query parameters onto the URL
+fetch("http://api.openweathermap.org/data/2.5/weather?" + queryParams, {
+    method: "GET"
+    }
+).then(async function(response) {
+    // use await to wait for the json data and then do something with it
+    console.log(await response.json());
 });
 ```
 
 Latitude and longitude have the advantage that we can look up weather information for any place on earth, even if we do not know its name or id. Let's look at how we could get [*forecast* information](http://openweathermap.org/forecast) using those same coordinates:
 
 ```js
-$.get("http://api.openweathermap.org/data/2.5/forecast", {
+let queryParams = new URLSearchParams({
     APPID: OPEN_WEATHER_APPID,
     lat:    29.423017,
     lon:   -98.48527,
     units: "imperial"
-}).done(function(data) {
-    console.log('5 day forecast', data);
+});
+// concat the query parameters onto the URL
+fetch("http://api.openweathermap.org/data/2.5/forecast?" + queryParams, {
+    method: "GET"
+    }
+).then(async function(response) {
+    // use await to wait for the json data and then do something with it
+    console.log(await response.json());
 });
 ```
 
@@ -173,12 +177,19 @@ Like we did when we first started exploring the current weather conditions, be s
 OpenWeatherMap provides a third example of an *endpoint* we could send our request to - let's see how we could use this [One Call API](https://openweathermap.org/api/one-call-api) to, as OpenWeather puts it, "get all your essential weather data" for a location:
 
 ```js
-$.get("http://api.openweathermap.org/data/2.5/onecall", {
+let queryParams = new URLSearchParams({
     APPID: OPEN_WEATHER_APPID,
     lat:    29.423017,
     lon:   -98.48527,
     units: "imperial"
-}).done(function(data) {
+});
+// concat the query parameters onto the URL
+fetch("http://api.openweathermap.org/data/2.5/onecall?" + queryParams, {
+    method: "GET"
+    }
+).then(async function(response) {
+    // use await to wait for the json data and then do something with it
+    const data = await response.json();
     console.log('The entire response:', data);
     console.log('Diving in - here is current information: ', data.current);
     console.log('A step further - information for tomorrow: ', data.daily[1]);
