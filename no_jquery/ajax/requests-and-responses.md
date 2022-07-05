@@ -44,18 +44,18 @@ In this example, we are sending a `POST` request rather than
 
 Now that we can send requests to the server, how do we handle the data that comes back? It is important to be aware that `fetch` requests are done *asynchronously*. This means that even though the request is fired off when we call `fetcch()`, JavaScript does not sit and wait for the response to come back. The server could reply in a fraction of a second, or it could reply in half a minute!
 
-<!-- !!! error "" -->
-    It is tempting to think we can write something along the lines of:
-    ```js
-    // THIS WILL *NOT* WORK
+It is tempting to think we can write something along the lines of:
+```js
+// THIS WILL *NOT* WORK
 
-    // Send fetch request
-    var data = fetch("/some-url");
-    // Handle data from Ajax request
-    doSomething(data);
-    ```
-    But just because a fetch request has been sent is no guarantee that it has come back from the server by the time the next line of JavaScript is executed. In our
-    example above, `doSomething` will be called before JavaScript has even finished sending the request to the server! Instead, we must explicitly specify a function to be called once the response has come back.
+// Send fetch request
+var data = fetch("/some-url");
+// Handle data from Ajax request
+doSomething(data);
+```
+
+But just because a fetch request has been sent is no guarantee that it has come back from the server by the time the next line of JavaScript is executed. In our
+example above, `doSomething` will be called before JavaScript has even finished sending the request to the server! Instead, we must explicitly specify a function to be called once the response has come back.
 
 The example below makes a `GET` request to the pokeAPI using the `/pokemon` endpoint for data regarding Charmander. 
 
