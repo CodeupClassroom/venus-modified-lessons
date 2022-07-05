@@ -44,7 +44,7 @@ In this example, we are sending a `POST` request rather than
 
 Now that we can send requests to the server, how do we handle the data that comes back? It is important to be aware that `fetch` requests are done *asynchronously*. This means that even though the request is fired off when we call `fetcch()`, JavaScript does not sit and wait for the response to come back. The server could reply in a fraction of a second, or it could reply in half a minute!
 
-!!! error ""
+<!-- !!! error "" -->
     It is tempting to think we can write something along the lines of:
     ```js
     // THIS WILL *NOT* WORK
