@@ -160,6 +160,8 @@ NOTE: using `await` will require the containing function to be declared with the
 
 Example:
 ```js
+(async function() {
+    
     // use async/await to make it a simpler function
     async function getPokeStats(pokeName) {
         const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + pokeName);
@@ -172,6 +174,9 @@ Example:
 
     // or this
     console.log(await getPokeStats("pikachu"));
+
+    ...
+})();
 ```
 
 ## Further Reading
