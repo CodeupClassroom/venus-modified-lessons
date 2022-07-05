@@ -13,4 +13,4 @@
 
 [Weather Map](no_jquery/ajax/weather-map.md)
 
-Single Page Applications: coming soon!
+[Single Page Applications](spa/index.md)
