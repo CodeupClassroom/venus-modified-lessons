@@ -114,4 +114,17 @@ import AboutView, {AboutEvents} from "./views/About.js";
 
 ## Exercise
 
+Let's modify the Home screen. 
+
+1. completely remove all code from `HomeEvents()`
+2. replace the `h1` text with "Hello Jalopy!" and center it
+3. create your own CSS file called `my-css.css` and include it in `index.html`
+4. add an `img` of a jalopy above the `p`. Use the file `assets/jalopy1.jpeg` as the source of the image. 
+5. You may experience problems with IntelliJ finding the `assets` folder from the root of the web application. If so, you should add a constant in `public_constants.js` and prepend it to the jalopy image path. Later, when we deploy the application to a proper web server, we will set that constant to an empty string.
+6. Give the jalopy's `img` a max-width of 300px and center it in the page. Use your CSS file for the styling.
+7. Change the `p` text to "Welcome to my Jalopy application!"
+8. Add a button under the `p` with an id of `img-button`
+9. Add an event listener for the button so that each time the button is clicked, the image `src` cycles through the images `jalopy1.jpeg`, `jalopy2.jpeg`, and `jalopy3.jpeg`. Therefore, the first time the button is clicked, the image should show `jalopy2.jpeg`. When the image is showing `jalopy3.jpeg` and the button is clicked again, the image should show `jalopy1.jpeg`.
+
+
 ## Next Lesson
