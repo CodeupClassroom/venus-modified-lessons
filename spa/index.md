@@ -38,4 +38,4 @@ We will be using our own toy SPA framework (Jalopy), but becoming familiar with 
 
 ## Next Lesson
 
-[Intro to our SPA Framework](jalopy_intro.md)
+[Intro to Jalopy (our SPA Framework)](jalopy_intro.md)

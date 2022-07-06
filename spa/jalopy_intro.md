@@ -33,3 +33,7 @@ As with all frameworks, there is a learning curve to being able to use it effect
 2. modify an existing view component
 3. add a new view/screen to Jalopy's starter application
 4. connect a view to an API as a source of data
+
+## Next Lesson
+
+[Jalopy's Composition](jalopy_parts.md)
