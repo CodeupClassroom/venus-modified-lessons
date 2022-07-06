@@ -14,10 +14,28 @@ Historically, whenever an end-user of a web application would click on a link to
 
 In the above diagram, an MPA must request a page refresh from the web server when data change. An SPA uses AJAX to fetch the data from the server and modifies its DOM. An SPA results in a more efficient use of network bandwidth and faster page updates. SPAs also do not flash or blink since they do not need to rebuild the entire DOM.
 
+## Building an SPA
+
+To build an SPA, we need to use a framework that handles some of the tasks required for an SPA to function. 
+
+Some popular SPA frameworks are:
+
+- [React](https://reactjs.org/)
+- [Angular](https://angular.io/)
+- [Vue](https://vuejs.org/)
+
+We will be using our own toy SPA framework (Jalopy), but becoming familiar with how Jalopy works will make learning one or more of the other SPA frameworks easier.
+
 ## Further Reading
+
+- [Intro to SPAs](https://www.bloomreach.com/en/blog/2018/what-is-a-single-page-application)
+
+- [SPA vs. MPA](https://lvivity.com/single-page-app-vs-multi-page-app)
 
 - [MDN SPA Definition](https://developer.mozilla.org/en-US/docs/Glossary/SPA)
 
 - [Wikipedia SPA Definition](https://en.wikipedia.org/wiki/Single-page_application)
 
-- [SPA vs. MPA](https://lvivity.com/single-page-app-vs-multi-page-app)
+## Next Lesson
+
+[Intro to our SPA Framework](jalopy_intro.md)
