@@ -128,3 +128,5 @@ Let's modify the Home screen.
 
 
 ## Next Lesson
+
+[Adding a new screen](add_quotes.md)
