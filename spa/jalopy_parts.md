@@ -2,9 +2,15 @@
 
 You will immediately notice that there are quite a few files involved in Jalopy's framework and the starter application. In this lesson, we will identify each of the files and its purpose.
 
+### Top-level files
+
 `index.html` The entry point for running the Jalopy starter application. 
 
+### CSS files
+
 `css/jalopy_starter.css` Contains a few simple and helpful CSS styles for the Jalopy starter application. Feel free to override or remove these.
+
+### Framework files
 
 `js/auth.js` Contains functions for authenticating and identifying the logged-in user.
 
@@ -25,3 +31,5 @@ You will immediately notice that there are quite a few files involved in Jalopy'
 `js/render.js` This file modifies the DOM with the view component's DOM info. It also modifies the DOM with the contents of `Navbar.js` and the notification `div` from `messaging.js`. It also executes the view component's specific JavaScript-loading function.
 
 `js/routing.js` This file is the routing table that maps routes (URIs) to view components and any API endpoints that will provide data to a view.
+
+### Application-specific files
