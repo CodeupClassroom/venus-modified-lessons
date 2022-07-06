@@ -88,3 +88,7 @@ The `import` statement at the top of the screen makes the `showNotification` fun
 `About(props)` is the view component's HTML function. It uses a template string to compose the HTML that it returns to the caller, i.e., the `render()` function in `render.js`. The `props` parameter contains any data returned from API endpoints specified for the view component in `router.js`. *IMPORTANT:* this function's name can be anything AS LONG AS `router.js` knows about it.
 
 `AboutEvents()` is the view component's JS function. This function contains the JavaScript for preparing the view component's DOM, like attaching event handlers. *IMPORTANT:* this function's name can be anything AS LONG AS `router.js` knows about it.
+
+## Next Lesson
+
+[Modifying an existing screen](modifying_home.md)
