@@ -79,6 +79,37 @@ Since the outside world does not need to call `changeAboutText()`, it does not n
 
 ### Changing view component function names
 
+`router.js` is responsible for connecting a view component's HTML and JS functions to the route that transitions to that view component. Thus, any time you create or modify a view component's HTML or JS functions, you must also modify its routing information in `router.js`.
+
+Let's change the About HTML function's name from `About` to `AboutView`. 
+1. change the function's name in `js/views/About.js`
+2. change the function's name for the `/about` route in `js/router.js`
+
+The resulting code looks like this:
+
+```js
+export default function AboutView(props) {
+    // language=HTML
+    return `
+...
+```
+(from file `js/views/About.js`)
+
+```js
+import Home, {HomeEvents} from "./views/Home.js";
+import AboutView, {AboutEvents} from "./views/About.js";
+
+...
+
+'/about': {
+    returnView: AboutView,
+    state: {},
+    uri: '/about',
+    title: 'About',
+    viewEvent: AboutEvents
+},
+```
+(from file `js/router.js`)
 
 
 ## Exercise
