@@ -46,7 +46,45 @@ These files are the view components that are specific to the starter application
 
 `js/views/Home.js` This is the Home screen.
 
-`js/views/Loading.js` This is the Loading screen that `createView.js` automatically loads while the currently selected route is loading and removes once the currently selected route finishes loading.
+`js/views/Loading.js` This is the Loading screen that `createView.js` automatically calls while the selected route/view component is loading. Once the selected view component finishes loading, its DOM replaces the loading screen's DOM.
 
+`js/views/Login.js` This is a simple login screen that will be used when we start the Backend module. Ignore it for now.
+
+`js/views/Register.js` This is a simple user registration screen that will be used when we start the Backend module. Ignore it for now.
+
+`js/views/User.js` This is a simple user information screen that will be used when we start the Backend module. Ignore it for now.
 
 ### Dissecting a view component
+
+Generally, a view component exposes two functions that Jalopy calls when rendering a view component to the DOM. The first function returns the HTML that will be plugged into the application's DOM, replacing whatever view component DOM is currently there. For simplicity, let's call this "the HTML function". The second function executes any JavaScript needed to prepare the view component, e.g., add event listeners to the view component's DOM elements. For simplicity, let's call this "the JS function".
+
+Looking at the view component `js/views/About.js`, we see those two functions:
+
+```js
+import {showNotification} from "../messaging.js";
+
+export default function About(props) {
+    return `
+        <header>
+            <h1>About Page</h1>
+        </header>
+        <main>
+            <div>
+                <p>About page is here.</p>  
+            </div>
+        </main>
+    `;
+}
+
+export function AboutEvents() {
+    showNotification("Hey, a message!", "danger");
+}
+```
+
+The `import` statement at the top of the screen makes the `showNotification` function available to the About screen. 
+
+`export` is needed for any functions that want to callable from outside of this JavaScript file. At a minimum, the view component's HTML function and JS function should have the `export` keyword. 
+
+`About(props)` is the view component's HTML function. It uses a template string to compose the HTML that it returns to the caller, i.e., the `render()` function in `render.js`. The `props` parameter contains any data returned from API endpoints specified for the view component in `router.js`. *IMPORTANT:* this function's name can be anything AS LONG AS `router.js` knows about it.
+
+`AboutEvents()` is the view component's JS function. This function contains the JavaScript for preparing the view component's DOM, like attaching event handlers. *IMPORTANT:* this function's name can be anything AS LONG AS `router.js` knows about it.
