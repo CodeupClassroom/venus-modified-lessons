@@ -12,6 +12,8 @@ You will immediately notice that there are quite a few files involved in Jalopy'
 
 ### Framework files
 
+These files should always be present in a Jalopy application, although the contents may change to suit your specific application.
+
 `js/auth.js` Contains functions for authenticating and identifying the logged-in user.
 
 `js/createView.js` Orchestrates the generation of a screen from a given URI.
@@ -32,4 +34,19 @@ You will immediately notice that there are quite a few files involved in Jalopy'
 
 `js/routing.js` This file is the routing table that maps routes (URIs) to view components and any API endpoints that will provide data to a view.
 
+`js/views/partials/Navbar.js` This file contains the a function that returns the HTML for the framework's menu bar. It is passed `props` created by any API endpoints for the current route.
+
 ### Application-specific files
+
+These files are the view components that are specific to the starter application. View components completely change based on the screens you have in your application. 
+
+`js/views/About.js` This is the view component for the about screen.
+
+`js/views/Error404.js` This is the 404 (not found) screen.
+
+`js/views/Home.js` This is the Home screen.
+
+`js/views/Loading.js` This is the Loading screen that `createView.js` automatically loads while the currently selected route is loading and removes once the currently selected route finishes loading.
+
+
+### Dissecting a view component
