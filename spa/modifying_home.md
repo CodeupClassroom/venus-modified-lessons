@@ -2,7 +2,7 @@
 
 In this lesson, we will make a few changes to the About screen/view component. Recall that the file responsible for the About screen is `js/views/About.js`.
 
-### Changing a view component's HTML
+## Changing a view component's HTML
 
 Let's modify the HTML to use a Bootstrap grid to display information about the application in the first row, and some information about the application's 3 developers (fake) in the second row.
 
@@ -57,7 +57,7 @@ export default function About(props) {
 
 NOTE: any anchor that you wish to use for Jalopy navigation needs to have the `data-link` attribute.
 
-### Changing a view component's JavaScript
+## Changing a view component's JavaScript
 
 Remove the call to `showNotification()`. You can also delete the import at the top of the file.
 
@@ -77,9 +77,9 @@ export function AboutEvents() {
 
 Since the outside world does not need to call `changeAboutText()`, it does not need to be exported.
 
-### Changing view component function names
+## Changing view component function names
 
-`router.js` is responsible for connecting a view component's HTML and JS functions to the route that transitions to that view component. Thus, any time you create or modify a view component's HTML or JS functions, you must also modify its routing information in `router.js`.
+`router.js` is responsible for connecting a view component's HTML and JS functions to the route that transitions to that view component. Thus, any time you create or modify a view component's HTML or JS function names, you must also modify the view component's routing information in `router.js`.
 
 Let's change the About HTML function's name from `About` to `AboutView`. 
 1. change the function's name in `js/views/About.js`
