@@ -96,7 +96,7 @@ TODO:
 
 ## Exercises
 
-Use the file `mouse_event_exercises.html` for these exercises.  Commit your changes to GitHub.
+Use the file `dom_exercises.html` for these exercises.  Commit your changes to GitHub.
 
 1. Remove your custom event listener code from previous exercises.
 
