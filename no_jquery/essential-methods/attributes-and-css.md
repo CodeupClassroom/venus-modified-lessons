@@ -44,10 +44,10 @@ TODO: be sure to cover classList.toggle(<classname>);
 
 1. Add a class to all `dd` elements named `invisible`.
 
-1. Create some CSS rules that sets elements with the `invisible` class to `visibility: hidden;`.
+1. Create some CSS rules that set elements with the `invisible` class to `visibility: hidden;`. What is the difference between `visibility: hidden;` and `display: none;`?
 
-1. Update the page with jQuery to add a link that toggles the class `invisible` on and off for all `dd` elements.
+1. Add an anchor on the page and JavaScript that will toggle the class `invisible` on and off for all `dd` elements.
 
 **Bonus**
 
-1. When any of the `dt` elements is clicked, the element that was clicked should be highlighted.
+1. When any of the `dt` elements is clicked, the element that was clicked should have a background color of "green".
