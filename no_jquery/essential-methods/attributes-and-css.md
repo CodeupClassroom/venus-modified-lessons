@@ -1,8 +1,36 @@
-# Attribute and Properties
+# Attributes and Properties
 
 jQuery provides many different methods for manipulating element attributes, but we will be covering just the most commonly used methods.
 
-[see Codeup WebDev v2 for this lesson](https://java.codeup.com/javascript-i/bom-and-dom/dom/)
+`.innerHTML`
+
+`.innerText`
+
+`.hasAttribute(<attribute name>)`
+
+`.getAttribute(<attribute name>)`
+
+`.setAttribute(<attribute name>, <value>)`
+
+`.classList`
+
+`.classList.add(<class name>)`
+
+`.classList.remove(<class name>)`
+
+`.classList.toggle(<class name>)`
+
+
+## CSS attributes
+
+`.style`
+
+This accesses INLINE STYLES ONLY for the element. 
+
+
+
+
+[Click this for the original v2 DOM lesson](https://java.codeup.com/javascript-i/bom-and-dom/dom/)
 
 ### Venus: do NOT go below this point for this lesson
 
