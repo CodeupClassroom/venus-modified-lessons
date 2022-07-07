@@ -7,7 +7,7 @@ TODO: BOM methods
 
 TODO: DOM Intro
 
-TODO: Selectors
+[Selectors](no_jquery/selectors.md)
 
 TODO: Attributes and properties
 
