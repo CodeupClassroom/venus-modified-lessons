@@ -195,7 +195,7 @@ Documentation for the techniques covered in this lesson:
 
 ## Exercises
 
-1. Open the file named `parks.html` for editing.  Commit all changes to
+1. Open the file named [parks.html](parks.html) for editing.  Commit all changes to
    GitHub.
 
 1. Under the FAQ, add 3 unordered lists like above.  Each list should contain a

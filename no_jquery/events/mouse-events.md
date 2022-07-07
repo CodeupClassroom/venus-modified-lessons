@@ -92,7 +92,7 @@ Here we are using `this` to reference the selected DOM element inside our listen
 ## Further Reading
 
 TODO:
-- [MDN add something here](https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [MDN mouse events](https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events)
 
 ## Exercises
 
