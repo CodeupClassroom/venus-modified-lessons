@@ -21,7 +21,7 @@ TODO: DOM Intro
 
 [Adding and removing elements](no_jquery/add_remove.md)
 
-TODO: Future home of coffee project
+[Coffee project](https://java.codeup.com/javascript-i/coffee-project/)
 
 -------------------------------------------------
 
