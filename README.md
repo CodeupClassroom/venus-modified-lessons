@@ -5,6 +5,8 @@
 
 [jQuery](no_jquery/index.md)
 
+[Key events](no_jquery/events/keyboard-events.md)
+
 [DOM Traversal](no_jquery/essential-methods/traversing.md) 
 
 [AJAX Basics and JSON](no_jquery/ajax/index.md)
