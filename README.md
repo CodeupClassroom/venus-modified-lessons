@@ -3,7 +3,7 @@
 
 ## Lessons
 
-### START BOM MODULE
+### START BOM/DOM MODULE
 
 TODO: BOM methods
 
