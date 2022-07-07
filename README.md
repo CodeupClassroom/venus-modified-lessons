@@ -3,6 +3,8 @@
 
 ## Lessons
 
+### START BOM MODULE
+
 TODO: BOM methods
 
 TODO: DOM Intro
@@ -21,11 +23,19 @@ TODO: DOM Intro
 
 TODO: Future home of coffee project
 
+-------------------------------------------------
+
+### AJAX MODULE
+
 [AJAX Basics and JSON](no_jquery/ajax/index.md)
 
 [Fetch](no_jquery/ajax/requests-and-responses.md)
 
 [Weather Map](no_jquery/ajax/weather-map.md)
+
+-------------------------------------------------
+
+### SPA MODULE
 
 [Single Page Applications](spa/index.md)
 
