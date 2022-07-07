@@ -4,6 +4,8 @@ There are a variety of ways to select elements in the DOM. We will cover methods
 
 [see Codeup WebDev v2 for this lesson](https://java.codeup.com/javascript-i/bom-and-dom/dom/)
 
+### Venus: do NOT go below this point for this lesson
+
 TODO: the below exercise needs to be split up between the selectors and properties lessons
 
 ## Exercises
