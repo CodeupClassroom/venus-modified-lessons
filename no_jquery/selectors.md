@@ -2,7 +2,7 @@
 
 There are a variety of ways to select elements in the DOM. We will cover methods for retrieving elements by their id, class, or tag name. We will also cover the direct access of form inputs.
 
-`document.getElementById()`
+`document.getElementById(<id>)`
 
 `document.getElementsByClassName(<class>)`
 
