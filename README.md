@@ -9,7 +9,7 @@ TODO: DOM Intro
 
 [Selectors](no_jquery/selectors.md)
 
-TODO: Attributes and properties
+[Attributes and properties](no_jquery/essential-methods/attributes-and-css.md)
 
 [Mouse events](no_jquery/events/mouse-events.md)
 
