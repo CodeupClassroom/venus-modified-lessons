@@ -5,7 +5,7 @@ Events include keyboard events like a key being pressed or when a key is up or d
 In this lesson we will learn how to write event handlers for the following events:
 
 - `key down` &mdash; Bind an event handler to the "keydown" JavaScript event or trigger that event on an element.
-- `key press` &mdash; Bind an event handler to the "keypress" JavaScript event or trigger that event on an element.
+- `key press` &mdash; Bind an event handler to the "keypress" JavaScript event or trigger that event on an element. Some special keys like Escape and Backspace do not trigger this event.
 - `key up` &mdash; Bind an event handler to the "keyup" JavaScript event or trigger that event on an element.
 - removing an event listener
 
