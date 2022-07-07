@@ -17,7 +17,7 @@ TODO: DOM Intro
 
 [DOM Traversal](no_jquery/essential-methods/traversing.md) 
 
-TODO: Adding and removing elements
+[Adding and removing elements](no_jquery/add_remove.md)
 
 TODO: Future home of coffee project
 
