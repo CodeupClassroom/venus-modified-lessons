@@ -29,13 +29,30 @@ Removes a given child element from the parent element.
 `<parent element>.removeChild<child element to remove>)`
 
 ```js
+const myOtherP = document.querySelector("#my-other-p");
+document.querySelector("#my-paragraphs").removeChild(myOtherP);
 ```
 
 ### replaceChild
 
-Replaces the first argument in the given parent with the second argument.
+Replaces the SECOND argument (old child) in the given parent with the FIRST argument (new child).
 
-`.replaceChild()`
+`<parent element>.replaceChild(<new child>, <old child>)`
 
 ```js
+// replace myNewP with myAwesomeP
+let myAwesomeP = document.createElement("p");
+myAwesomeP.innerText = "I'm an EVEN BETTER paragraph";
+myAwesomeP.classList.add("bg-danger");
+document.querySelector("#my-paragraphs").replaceChild(myAwesomeP, myNewP);
 ```
+
+## Further Reading
+
+[MDN removeChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)
+
+[MDN replaceChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild)
+
+## Exercise
+
+TODO: a really cool exercise to practice how to really manipulate the DOM!
