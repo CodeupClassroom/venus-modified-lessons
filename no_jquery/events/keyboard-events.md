@@ -94,7 +94,7 @@ Create a file named `konami.html` using the template below. This code will log a
         "use strict";
 
         document.addEventListener("keyup", function(event) {
-            console.log(event.keyCode);
+            console.log(event.key);
         });
     </script>
 </body>
