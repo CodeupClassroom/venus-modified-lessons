@@ -2,7 +2,19 @@
 
 There are a variety of ways to select elements in the DOM. We will cover methods for retrieving elements by their id, class, or tag name. We will also cover the direct access of form inputs.
 
-[see Codeup WebDev v2 for this lesson](https://java.codeup.com/javascript-i/bom-and-dom/dom/)
+`document.getElementById()`
+
+`document.getElementsByClassName(<class>)`
+
+`document.getElementsByTagName(<tag>)`
+
+`document.querySelector(<selector>)`
+
+`document.querySelectorAll(<selector>)`
+
+
+[Click this for the original v2 DOM lesson](https://java.codeup.com/javascript-i/bom-and-dom/dom/)
+
 
 ### Venus: do NOT go below this point for this lesson
 
