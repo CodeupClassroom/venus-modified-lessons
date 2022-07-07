@@ -12,6 +12,9 @@ There are a variety of ways to select elements in the DOM. We will cover methods
 
 `document.querySelectorAll(<selector>)`
 
+`document.forms.<form name>.<form field name>`
+
+
 
 [Click this for the original v2 DOM lesson](https://java.codeup.com/javascript-i/bom-and-dom/dom/)
 
