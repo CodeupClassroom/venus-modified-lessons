@@ -86,8 +86,8 @@ While this may be a simpler approach for creating elements, it is not necessaril
 And YES, you can change the way this exercise looks! Make it pretty!
 
 ### Bonus
-1.  If the user tries to add a todo without any text, tell the user that the todo's text cannot be blank and do not add the todo. This is called a `validator`.
-2. Only allow 10 todos. If the user tries to add more than 10 todos, they are presented with a snarky response along the lines of "Try making a Todone first."
+1.  If the user tries to add a todo without any text, tell the user that the todo's text cannot be blank and do not add the todo. This is called `validation`. You can add this check in `addTodo()`. Just return from the function if validation fails.
+2. Only allow 10 todos. If the user tries to add more than 10 todos, they are presented with a snarky response along the lines of "Try making a Todone first.". You can also perform this check in `addTodo()`. Return without adding the todo if there are more than 10 todos already created. The DOM property `children` can tell you how many todos are still around.
 
 
 Read up on event.target. It's handy!
