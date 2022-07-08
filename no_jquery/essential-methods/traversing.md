@@ -204,7 +204,7 @@ Documentation for the techniques covered in this lesson:
 1. Create a button that, when clicked, makes the last `li` in each `ul` have a
    yellow background.
 
-1. When any `h3` is clicked, the `li`s underneath it should be have a `fontWeight` of "bold". Hint: you should use `this` in the event listener to access the next sibling of the `h3` that is clicked. You can get to the corresponding `ul` by traversing to the `h3`'s sibling and then it's children.
+1. When any `h3` is clicked, the `li`s underneath it should have a `fontWeight` of "bold". Hint: you should use `this` in the event listener to access the next sibling of the `h3` that is clicked. You can get to the corresponding `ul` by traversing to the `h3`'s sibling and then it's children.
 
 1. When any list item is clicked, the first `li` of that list item's parent `ul` should have a
    font color of blue. Hint: you should again rely on `this` in the `li` event handler.
