@@ -67,3 +67,33 @@ Note that there is no comma after the last property of an object.
 You can find the [formal specification for JSON here](http://json.org/).
 
 In the following sections, we will create and modify some JSON files by hand to get experience working with the format and the basics of Ajax requests. In the real-world, however, you will most likely not edit these files directly; rather, JSON would most likely be automatically generated, or sent and received by a web server.
+
+## JSON vs XML
+
+As mentioned previously, most devs favor JSON over XML these days. XML is more wordy than JSON. Raw JSON is very readable.
+
+In the following example, we request an anime quote from an web-accessible anime quote API. The quote that it returns contains 3 pieces of information:
+    - Anime: Hunter X Hunter
+    - Character: Killua Zoldyck
+    - Quote: "Assassination — It's the family trade. We all take it up. My folks see me as an exceptional prospect. But I don't see that I should have to live up to their expectations."
+
+Below is a visual comparison of what the quote data would look like returned in both XML and JSON formats.
+
+### XML version
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<animequote>
+	<anime>Hunter X Hunter</anime>
+	<character>Killua Zoldyck</character>
+	<quote>Assassination — It's the family trade. We all take it up. My folks see me as an exceptional prospect. But I don't see that I should have to live up to their expectations.</quote>
+</animequote>
+```
+
+### JSON
+```json
+{
+	"anime":"Hunter X Hunter",
+	"character":"Killua Zoldyck",
+	"quote":"Assassination — It's the family trade. We all take it up. My folks see me as an exceptional prospect. But I don't see that I should have to live up to their expectations."
+}
+```
