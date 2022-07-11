@@ -204,10 +204,9 @@ Documentation for the techniques covered in this lesson:
 1. Create a button that, when clicked, makes the last `li` in each `ul` have a
    yellow background.
 
-1. When any `h3` is clicked, the `li`s underneath it should be bolded. Use
-   `fontWeight = "bold"` to achieve this. Hint: you should use `this` in the event listener to access the next sibling of the `h3` that is clicked. Also, an `h3` is like an aunt or uncle to its corresponding `li`s
+1. When any `h3` is clicked, the `li`s underneath it should have a `fontWeight` of "bold". Hint: you should use `this` in the event listener to access the next sibling of the `h3` that is clicked. You can get to the corresponding `ul` by traversing to the `h3`'s sibling and then it's children.
 
-1. When any list item is clicked, first `li` of the parent `ul` should have a
+1. When any list item is clicked, the first `li` of that list item's parent `ul` should have a
    font color of blue. Hint: you should again rely on `this` in the `li` event handler.
 
 ### Bonus
@@ -216,8 +215,8 @@ Create 3 divs that each look like a picture frame. Each one should have a unique
 
 The rules are the following:
 
-- When the left picture's button is clicked, the left and center picture swap images.
-- When the center picture's button is clicked, the center picture swaps randomly with either the left OR right frames.
+- When the left picture's button is clicked, the left and center pictures swap images.
+- When the center picture's button is clicked, the center picture swaps randomly with either the left OR right pictures.
 - When the right picture's button is clicked, the right and center pictures swap images.
 
 Hint: swap the values of the images' `src` attributes.
