@@ -31,6 +31,8 @@ TODO: DOM Intro
 
 [Fetch](no_jquery/ajax/requests-and-responses.md)
 
+[Mapbox API](https://java.codeup.com/jquery/mapbox-api/)
+
 [Weather Map](no_jquery/ajax/weather-map.md)
 
 -------------------------------------------------
