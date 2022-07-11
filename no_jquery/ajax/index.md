@@ -73,9 +73,9 @@ In the following sections, we will create and modify some JSON files by hand to 
 As mentioned previously, most devs favor JSON over XML these days. XML is more wordy than JSON. Raw JSON is very readable.
 
 In the following example, we request an anime quote from a web-accessible anime quote API. The quote that the API returns contains 3 pieces of information:
-    - Anime: Hunter X Hunter
-    - Character: Killua Zoldyck
-    - Quote: "Assassination — It's the family trade. We all take it up. My folks see me as an exceptional prospect. But I don't see that I should have to live up to their expectations."
+- Anime: Hunter X Hunter
+- Character: Killua Zoldyck
+- Quote: "Assassination — It's the family trade. We all take it up. My folks see me as an exceptional prospect. But I don't see that I should have to live up to their expectations."
 
 Below is a visual comparison of what the quote data would look like returned in both XML and JSON formats.
 
