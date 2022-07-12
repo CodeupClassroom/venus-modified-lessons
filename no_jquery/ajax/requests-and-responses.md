@@ -203,6 +203,6 @@ Example:
 1. Create a new html file called `ajax-blog.html`.
 1. At minimum, your Ajax blog will need an empty `<div>` with an id of `posts`.
 1. Make it pretty with custom CSS and/or Bootstrap.
-1. Download [blog.json](blog.json) to your `data` directory from before.
+1. Download [blog.json](./blog.json) to your `data` directory from before.
 1. Use Ajax to load the contents of `blog.json` and add the data from it to your `#posts` div.
 1. Add additional entries to `blog.json` and make sure your changes are reflected on the page.
