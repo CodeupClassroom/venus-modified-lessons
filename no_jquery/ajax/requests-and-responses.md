@@ -191,8 +191,8 @@ Example:
 
 ### Ajax Store
 
-1. Download and save [ajax-store.html](/examples/javascript/ajax-store.html).
-1. Create a `data` directory and download [inventory.json](/examples/javascript/inventory.json) to that folder.
+1. Download and save [ajax-store.html](ajax-store.html).
+1. Create a `data` directory and download [inventory.json](inventory.json) to that folder.
 1. Your online tool store should load data from the JSON file using a get request and append the data to the table. As explained in the lesson, you will need to use `fetch` and either a couple of `.then()` calls, or `async/await`.
 1. Add some new entries to inventory.json and see how the data on the page gets updated.
 1. Add a "Refresh" button that will load inventory.json for you without having to refresh the entire page.
@@ -203,6 +203,6 @@ Example:
 1. Create a new html file called `ajax-blog.html`.
 1. At minimum, your Ajax blog will need an empty `<div>` with an id of `posts`.
 1. Make it pretty with custom CSS and/or Bootstrap.
-1. Download [blog.json](/examples/javascript/blog.json) to your `data` directory from before.
+1. Download [blog.json](blog.json) to your `data` directory from before.
 1. Use Ajax to load the contents of `blog.json` and add the data from it to your `#posts` div.
 1. Add additional entries to `blog.json` and make sure your changes are reflected on the page.
