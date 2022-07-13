@@ -120,10 +120,10 @@ fetch("/some-url").then(function(response) {
     return response.json();
 }).then(function(data) {
     console.log("At last, we have the JSON data we want: " + data);
-}).fail(function(error) {
+}).catch(function(error) {
     console.log("ERROR!!!");
     console.log("Error message: " + error.message);
-}).always(function() {
+}).finally(function() {
     console.log("This function always runs!");
 });
 ```
