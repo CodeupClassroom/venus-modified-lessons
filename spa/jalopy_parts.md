@@ -91,4 +91,4 @@ The `import` statement at the top of the screen makes the `showNotification` fun
 
 ## Next Lesson
 
-[Modifying an existing screen](modifying_home.md)
+[Modifying an existing screen](modifying_screen.md)

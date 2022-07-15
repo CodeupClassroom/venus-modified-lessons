@@ -111,6 +111,14 @@ import AboutView, {AboutEvents} from "./views/About.js";
 ```
 (from file `js/router.js`)
 
+### Tracking the version
+
+Use the application's version number in `public_constants.js` as a simple way of tracking which version of the software is currently being run in the browser. Dev companies have a variety of techniques for using version numbers. We will simply increment the version number each time we commit our work. 
+
+- Open the file `public_constants.js`.
+- Increment the value for the constant FRONTEND_VERSION to 0.0002
+- Run your web app and check the version number in the footer
+- Add, commit, and push
 
 ## Exercise
 
@@ -125,8 +133,8 @@ Let's modify the Home screen.
 7. Change the `p` text to "Welcome to my Jalopy application!"
 8. Add a button under the `p` with an id of `img-button`
 9. Add an event listener for the button so that each time the button is clicked, the image `src` cycles through the images `jalopy1.jpeg`, `jalopy2.jpeg`, and `jalopy3.jpeg`. Therefore, the first time the button is clicked, the image should show `jalopy2.jpeg`. When the image is showing `jalopy3.jpeg` and the button is clicked again, the image should show `jalopy1.jpeg`.
-
+10. Increment the app version number to 0.0003
 
 ## Next Lesson
 
-[Adding a new screen](add_quotes.md)
+[Adding a new screen](add_screen.md)
