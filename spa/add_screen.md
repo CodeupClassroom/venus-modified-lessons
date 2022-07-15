@@ -112,9 +112,41 @@ export function CatFactsEvents() {
 
 Let's add a Quotes screen, where we will display quotes from famous people.
 
+1. create a new view component file called `views/Quotes.js`
+2. in `Quotes.js`, create an HTML function called `QuotesView` and a JS function called `QuotesEvents`. Remember to `export` both functions.
+3. add an entry in `router.js`. Remember to `import` both functions.
+4. in the `QuotesView` function, add an empty `<div>` or `<table>` in which you will use JS to add quotes. Give it an id of `my-quotes`
+5. in the `QuotesEvents` function, use JavaScript to dynamically add ALL of the below quotes to your `my-quotes` element (`div` or `table`). Format your quotes however you wish (e.g., striped table rows, Bootstrap cards, etc.). Encapsulate all of the functionality for adding a single quote to `my-quotes` in its own function called `addQuote`. This function can call other functions, if you wish.
 
 
+### Sample Quote Data
 
+Quote: "War is organized murder and torture against our brothers."
+Author: "Alfred Adler"
 
+Quote: "Follow sound business trends, not fashion trends."
+Author: "Janice Dickinson"
 
+Quote: "I'm sure we, the American people, are the butt of jokes by those in power."
+Author: "Alice Walker"
 
+Quote: "If the security forces continue to be dominated as they are now by political groups or sects, then the people won't trust in them - and the result will be civil war or fragmentation of the country."
+Author: "Adnan Pachachi"
+
+Quote: "We prefer world law in the age of self-determination to world war in the age of mass extermination."
+Author: "John F. Kennedy"
+
+Quote: "I got a lovely check today from being a writer that I earned by sitting at home. That's rewarding."
+Author: "Harvey Fierstein"
+
+Quote: "I think God's justice is making wrongs right."
+Author: "Joel Osteen"
+
+Quote: "For it is mutual trust, even more than mutual interest that holds human associations together. Our friends seldom profit us but they make us feel safe. Marriage is a scheme to accomplish exactly that same end."
+Author: "H. L. Mencken"
+
+Quote: "If science fiction is the mythology of modern technology, then its myth is tragic."
+Author: "Ursula K. Le Guin"
+
+Quote: "Men, when they fight in movies, it's a very different style. Harrison Ford was so cool when he had the whip, and Bruce Lee was such an artist that you couldn't take your eyes off of him."
+Quthor: "Lucy Liu"
