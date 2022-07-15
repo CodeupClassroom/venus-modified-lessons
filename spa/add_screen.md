@@ -45,7 +45,7 @@ There are different ways to cause navigation to the new screen: a link in the me
 Open the file `views/partials/Navbar.js. Replace the last three lines of the file with this:
 ```js
     html += `<a class="jalopy-nav" href="/cats" data-link>Cat Facts</a>`;
-    html = html + `</nav>`;
+    html += `</nav>`;
     return html;
 }
 ```
