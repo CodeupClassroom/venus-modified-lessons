@@ -128,7 +128,14 @@ Let's modify the Home screen.
 2. replace the `h1` text with "Hello Jalopy!" and center it
 3. create your own CSS file called `my-css.css` and include it in `index.html`
 4. add an `img` of a jalopy above the `p`. Use the file `assets/jalopy1.jpeg` as the source of the image. 
-5. You may experience problems with IntelliJ finding the `assets` folder from the root of the web application. If so, you should add a constant in `public_constants.js` and prepend it to the jalopy image path. Later, when we deploy the application to a proper web server, we will set that constant to an empty string.
+5. You may experience problems with IntelliJ finding the `assets` folder from the root of the web application. If so, you should add a constant in `public_constants.js` and prepend it to the jalopy image path. Later, when we deploy the application to a proper web server, we will set that constant to an empty string. For example, in `js/public_constants.js`, we could declare:
+```js
+const INTELLIJ_PROJECT_PATH = 'jalopy/';
+```
+and use it in an image `src` attribute in a view's HTML function like this:
+```html
+<img src="${INTELLIJ_PROJECT_PATH}assets/jalopy1.jpeg">
+```
 6. Give the jalopy's `img` a max-width of 300px and center it in the page. Use your CSS file for the styling.
 7. Change the `p` text to "Welcome to my Jalopy application!"
 8. Add a button under the `p` with an id of `img-button`

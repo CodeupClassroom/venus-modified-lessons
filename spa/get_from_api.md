@@ -65,4 +65,7 @@ Note the use of the template string placeholder which injects the `props` data i
 
 ## Exercise
 
-https://quote-garden.herokuapp.com/api/v3/quotes/random?count=10
+1. Add the following URL to the `state` property of your quotes view route entry in `router.js`:
+https://quotes.fulgentcorp.com:12250/api/v1/quotes?random=true&limit=10
+Be sure to give it an appropriate key in `state`, like `quotes`
+2. In your quote view's HTML function, remove your previous fake data. Iterate over the `props` parameter to display the quotes data from the API in your HTML. Similar to the fake data, display the quote and the quote's author.
