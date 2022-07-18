@@ -69,3 +69,7 @@ Note the use of the template string placeholder which injects the `props` data i
 https://quotes.fulgentcorp.com:12250/api/v1/quotes?random=true&limit=10
 Be sure to give it an appropriate key in `state`, like `quotes`
 2. In your quote view's HTML function, remove your previous fake data. Iterate over the `props` parameter to display the quotes data from the API in your HTML. Similar to the fake data, display the quote and the quote's author.
+
+## Next Lesson
+
+[Inserting data using an API](add_to_api.md)
