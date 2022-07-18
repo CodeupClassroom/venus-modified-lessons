@@ -28,6 +28,8 @@ These files should always be present in a Jalopy application, although the conte
 
 `js/private_constants.js` This file contains global constants that WILL NOT BE PUSHED to Github. Put information like API keys and credentials that are ok for the end-user to have in this file. 
 
+*IMPORTANT NOTE:* the first time you download Jalopy, you will need to create this file since it is not pushed to Github. 
+
 `js/public_constants.js` This file contains global constants that will be pushed to Github. Put non-sensitive information like version # and application switches in this file.
 
 `js/render.js` This file modifies the DOM with the view component's DOM info. It also modifies the DOM with the contents of `Navbar.js` and the notification `div` from `messaging.js`. It also executes the view component's specific JavaScript-loading function.

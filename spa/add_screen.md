@@ -9,47 +9,47 @@ In this lesson, we will a new screen/view component to our Jalopy project. The p
 5. go back to thew view component and add content/functionality to the screen
 
 ## Step 1: make the new view component file
-Let's add a new page that will display a single fact about cats.
+Let's add a new page that will display a single fact about dogs.
 
-Create a new file: `views/CatFacts.js` with the following code:
+Create a new file: `views/DogFacts.js` with the following code:
 ```js
-export default function CatFactsView(props) {
-    return `<h1>Cat Facts</h1>`;
+export default function DogFactsView(props) {
+    return `<h1>Dog Facts</h1>`;
 }
 
-export function CatFactsEvents() {
+export function DogFactsEvents() {
 }
 ```
-`CatFactsView(props)` is the HTML function for the screen and `CatFactsEvents()` is the JavaScript function. We have to `export` both functions so that the framework can call them when the user navigates to the screen. `props` is a parameter containing any data that needs to be passed to the HTML function (more about this next lesson).
+`DogFactsView(props)` is the HTML function for the screen and `DogFactsEvents()` is the JavaScript function. We have to `export` both functions so that the framework can call them when the user navigates to the screen. `props` is a parameter containing any data that needs to be passed to the HTML function (more about this next lesson).
 
 ## Step 2: add a routing entry
 Open the file `router.js` and add the following line to the end of the `imports` at the top of the file:
 ```js
-import CatFactsView, {CatFactsEvents} from "./views/CatFacts.js";
+import DogFactsView, {DogFactsEvents} from "./views/DogFacts.js";
 ```
-This line of code imports the HTML and JavaScript functions from the view component. Next, add a routing entry for the Cat Facts screen. 
+This line of code imports the HTML and JavaScript functions from the view component. Next, add a routing entry for the Dog Facts screen. 
 ```js
-        '/cats': {
-            returnView: CatFactsView,
+        '/dogs': {
+            returnView: DogFactsView,
             state: {},
-            uri: '/cats',
-            title: 'Cat Facts',
-            viewEvent: CatFactsEvents
+            uri: '/dogs',
+            title: 'Dog Facts',
+            viewEvent: DogFactsEvents
         },
 ```
-`'/cats'` is the route that will navigate the application to the Cat Facts screen. `returnView` tells the framework which function will be called to generate the HTML part of the screen. We will discuss `state` in the next lesson. `uri` should match the route. `title` is what you want to display on the browser title bar when the screen is loaded. `viewEvent` tells the framework which function will be called after the screens DOM is loaded. This function is normally used to initialize screen fields and add event listeners to DOM elements.
+`'/dogs'` is the route that will navigate the application to the Dog Facts screen. `returnView` tells the framework which function will be called to generate the HTML part of the screen. We will discuss `state` in the next lesson. `uri` should match the route. `title` is what you want to display on the browser title bar when the screen is loaded. `viewEvent` tells the framework which function will be called after the screens DOM is loaded. This function is normally used to initialize screen fields and add event listeners to DOM elements.
 
 ## Step 3: add navigation links
 There are different ways to cause navigation to the new screen: a link in the menu, a link in page content, redirection, etc. Navigation specifics depend on the application and its developers. We will extend the starter Jalopy menu with a link for the new screen.
 
 Open the file `views/partials/Navbar.js. Replace the last three lines of the file with this:
 ```js
-    html += `<a class="jalopy-nav" href="/cats" data-link>Cat Facts</a>`;
+    html += `<a class="jalopy-nav" href="/dogs" data-link>Dog Facts</a>`;
     html += `</nav>`;
     return html;
 }
 ```
-This code adds a link to the end of the menu that will route to the Cat Facts screen.
+This code adds a link to the end of the menu that will route to the Dog Facts screen.
 
 ## Step 4: try it out
 Run your application in the browser and view your handiwork! It should look something like this:
@@ -58,17 +58,17 @@ Run your application in the browser and view your handiwork! It should look some
 
 ## Step 5: add more content to the view component
 
-Finally, let's jazz up the Cat Facts screen by displaying a cat fact from https://alexwohlbruck.github.io/cat-facts/docs/endpoints/facts.html
+Finally, let's jazz up the Dog Facts screen by displaying a dog fact from https://dog-api.kinduff.com/api/facts?number=5
 
-Replace your `CatFactsView` function with this:
+Replace your `DogFactsView` function with this:
 ```js
-export default function CatFactsView(props) {
+export default function DogFactsView(props) {
     return `
 <div class="container">
-    <h1>Cat Facts</h1>
+    <h1>Dog Facts</h1>
     <div class="card">
         <div class="card-body">
-            <p class="cat-fact">It has been scientifically proven that stroking a cat can lower one's blood pressure.</p>
+            <p class="dog-fact">Humans generally see better than dogs, but dogs see much better when there is low-light.</p>
         </div>
     </div>
 </div>
@@ -80,16 +80,16 @@ Check out your work!
 
 ## Adding some JavaScript
 
-Lastly, let's hide the fact and add a button. When the button is clicked, the fact will show itself. For convenience and brevity, we will use inline CSS to hide the fact. Here's the code for the entire `views/CatFacts.js`:
+Lastly, let's hide the fact and add a button. When the button is clicked, the fact will show itself. For convenience and brevity, we will use inline CSS to hide the fact. Here's the code for the entire `views/DogFacts.js`:
 
 ```js
-export default function CatFactsView(props) {
+export default function DogFactsView(props) {
     return `
 <div class="container">
-    <h1>Cat Facts</h1>
+    <h1>Dog Facts</h1>
     <div class="card">
         <div class="card-body">
-            <p class="cat-fact" style="visibility: hidden">It has been scientifically proven that stroking a cat can lower one's blood pressure.</p>
+            <p class="dog-fact" style="visibility: hidden">Humans generally see better than dogs, but dogs see much better when there is low-light.</p>
         </div>
     </div>
     <button class="form-control" id="show-fact-btn">Show Fact</button>
@@ -97,10 +97,10 @@ export default function CatFactsView(props) {
 `;
 }
 
-export function CatFactsEvents() {
+export function DogFactsEvents() {
     const btn = document.querySelector("#show-fact-btn");
     btn.addEventListener("click", function(event) {
-        const facts = document.querySelectorAll(".cat-fact");
+        const facts = document.querySelectorAll(".dog-fact");
         for (let i = 0; i < facts.length; i++) {
             facts[i].style.visibility = "";
         }
