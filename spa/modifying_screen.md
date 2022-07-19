@@ -176,6 +176,11 @@ Add an entry like:
 127.0.0.1   jalopy.local
 ```
 
+### Step 7: Cross your fingers and try it out
+
+Visit `http://jalopy.local` in your browser.
+
+
 ## Exercise
 
 Let's modify the Home screen. 
