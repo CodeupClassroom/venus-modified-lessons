@@ -124,61 +124,41 @@ Use the application's version number in `public_constants.js` as a simple way of
 
 IntelliJ tries to make your webdev life easier by acting like a tiny web server so you can quickly and easily run your web pages while you are developing them. However, you can quickly bump your head on some of its limitations, primarily how it serves up assets, like images. 
 
-The Mac has a built-in Apache web server that you can use, in place of IntelliJ. Unfortunately, it is a bit tricky to configure. The below steps work for OS X Monterrey. If you have trouble with these steps, please check the web for more current steps for your particular OS version.
+The Mac has a built-in Apache web server that you can use, in place of IntelliJ. Unfortunately, it is a bit tricky to configure. Instead, let's use nginx!
 
-### Step 1: determine your Mac user and group names
-`whoami`
-`groups $(whoami) | cut -d' ' -f1`
+### Step 1: Install nginx
+`brew install nginx`
 
-### Step 2: edit Apache's httpd.conf
-`sudo vi /etc/apache2/httpd.conf`
 
-Look for "_www". Replace the user and group names with the ones you discovered in Step 1
+### Step 2: Find the nginx config file path
+`nginx -t`
 
-Look for "Include /private/etc/apache2/extra/httpd-vhosts.conf". Remove the "#" in front of that line
+It is usually "/usr/local/etc/nginx/nginx.conf"
 
-### Step 3: add a virtual hosts file
-`sudo vi /private/etc/apache2/extra/httpd-vhosts.conf`
 
-Add something like this:
+### Step 3: Edit the nginx config file
+
+Change the port:
+
 ```
-<VirtualHost *:80>
-    DocumentRoot "/Users/<your user name>/ideaProjects/codeup-web-exercises/jalopy"
-    ServerName codeup.local
-
-    <Directory "/Users/<your user name>/ideaProjects/codeup-web-exercises/jalopy">
-        AllowOverride All
-        Require all granted
-    </Directory>
-</VirtualHost>
+server {
+	listen 9000;
 ```
 
-### Step 4: Create a user conf file for your user name
-`sudo vi /etc/apache2/users/<your user name>.conf`
+Change the location of the web root:
 
-Add something like:
 ```
-<Directory "/Users/<your user name>/ideaProjects/codeup-web-exercises/jalopy">
-        Options Indexes MultiViews FollowSymLinks
-        AllowOverride All
-        Require all granted
-</Directory>
+location / {
+	root	<path to jalopy's index.html>
 ```
 
-### Step 5: restart Apache
-`sudo apachectl restart`
+### Step 4: Start or restart nginx
+`nginx`
 
-### Step 6: add a hosts entry 
-`sudo vi /etc/hosts`
 
-Add an entry like:
-```
-127.0.0.1   jalopy.local
-```
+### Step 5: Cross your fingers and try it out
 
-### Step 7: Cross your fingers and try it out
-
-Visit `http://jalopy.local` in your browser.
+Visit `http://localhost:9000` in your browser.
 
 
 ## Exercise
