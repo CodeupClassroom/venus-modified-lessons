@@ -120,6 +120,57 @@ Use the application's version number in `public_constants.js` as a simple way of
 - Run your web app and check the version number in the footer
 - Add, commit, and push
 
+## How to NOT use IntelliJ as a web server
+
+IntelliJ tries to make your webdev life easier by acting like a tiny web server so you can quickly and easily run your web pages while you are developing them. However, you can quickly bump your head on some of its limitations, primarily how it serves up assets, like images. 
+
+The Mac has a built-in Apache web server that you can use, in place of IntelliJ. Unfortunately, it is a bit tricky to configure. The below steps work for OS X Monterrey. If you have trouble with these steps, please check the web for more current steps for your particular OS version.
+
+### Step 1: determine your Mac user and group names
+`whoami`
+`groups $(whoami) | cut -d' ' -f1`
+
+### Step 2: edit Apache's httpd.conf
+`sudo vi /etc/apache2/httpd.conf`
+
+Look for "_www"
+Replace the user and group names with the ones you discovered in Step 1
+
+Look for "Include /private/etc/apache2/extra/httpd-vhosts.conf"
+Remove the "#" in front of that line
+
+### Step 3: add a virtual hosts file
+`sudo vi /private/etc/apache2/extra/httpd-vhosts.conf`
+
+Add something like this:
+```
+<VirtualHost *:80>
+    DocumentRoot "/Users/<your user name>/ideaProjects/codeup-web-exercises/jalopy"
+    ServerName codeup.local
+
+    <Directory "/Users/<your user name>/ideaProjects/codeup-web-exercises/jalopy">
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
+
+### Step 4: Create a user conf file for your user name
+`sudo vi /etc/apache2/users/<your user name>.conf`
+
+Add something like:
+```
+<Directory "/Users/<your user name>/ideaProjects/codeup-web-exercises/jalopy">
+        Options Indexes MultiViews FollowSymLinks
+        AllowOverride All
+        Require all granted
+</Directory>
+```
+
+### Step 5: restart Apache
+`sudo apachectl restart`
+
+
 ## Exercise
 
 Let's modify the Home screen. 
