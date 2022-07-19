@@ -170,6 +170,13 @@ Add something like:
 ### Step 5: restart Apache
 `sudo apachectl restart`
 
+### Step 6: add a hosts entry 
+`sudo vi /etc/hosts`
+
+Add an entry like:
+```
+127.0.0.1   jalopy.local
+```
 
 ## Exercise
 
