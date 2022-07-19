@@ -152,6 +152,26 @@ location / {
 	root	<path to jalopy's index.html>
 ```
 
+Add a few redirection rules above the current `location` 
+
+```
+        location /dogs {
+                return 301 $scheme://localhost:9000/;
+        }
+        location /about {
+                return 301 $scheme://localhost:9000/;
+        }
+        location /login {
+                return 301 $scheme://localhost:9000/;
+        }
+        location /register {
+                return 301 $scheme://localhost:9000/;
+        }
+        location /quotes {
+                return 301 $scheme://localhost:9000/;
+        }
+```
+
 ### Step 4: Start or restart nginx
 `nginx`
 
