@@ -133,11 +133,9 @@ The Mac has a built-in Apache web server that you can use, in place of IntelliJ.
 ### Step 2: edit Apache's httpd.conf
 `sudo vi /etc/apache2/httpd.conf`
 
-Look for "_www"
-Replace the user and group names with the ones you discovered in Step 1
+Look for "_www". Replace the user and group names with the ones you discovered in Step 1
 
-Look for "Include /private/etc/apache2/extra/httpd-vhosts.conf"
-Remove the "#" in front of that line
+Look for "Include /private/etc/apache2/extra/httpd-vhosts.conf". Remove the "#" in front of that line
 
 ### Step 3: add a virtual hosts file
 `sudo vi /private/etc/apache2/extra/httpd-vhosts.conf`
