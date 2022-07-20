@@ -152,25 +152,36 @@ location / {
 	root	<path to jalopy's index.html>
 ```
 
-Add a few redirection rules above the current `location` 
+Add a few aliases rules below the current `location`. The aliases tell nginx how to route browser refreshes back to the Jalopy application's router.
 
 ```
         location /dogs {
-                return 301 $scheme://localhost:9000/;
+                alias   /Users/markrobinson/ideaProjects/jalopy;
+                index  index.html index.htm;
         }
+
         location /about {
-                return 301 $scheme://localhost:9000/;
+                alias   /Users/markrobinson/ideaProjects/jalopy;
+                index  index.html index.htm;
         }
-        location /login {
-                return 301 $scheme://localhost:9000/;
-        }
-        location /register {
-                return 301 $scheme://localhost:9000/;
-        }
+
         location /quotes {
-                return 301 $scheme://localhost:9000/;
+                alias   /Users/markrobinson/ideaProjects/jalopy;
+                index  index.html index.htm;
+        }
+
+        location /register {
+                alias   /Users/markrobinson/ideaProjects/jalopy;
+                index  index.html index.htm;
+        }
+
+        location /login {
+                alias   /Users/markrobinson/ideaProjects/jalopy;
+                index  index.html index.htm;
         }
 ```
+
+NOTE: anytime you add a new route in a Jalopy application, you should add another alias in your nginx configuration file so that browser refreshes on that screen do not give you a `404` response.
 
 ### Step 4: Start or restart nginx
 `nginx`
