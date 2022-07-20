@@ -4,7 +4,7 @@
 
 ### NOTE: VENUS WILL NOT BARE CLONE THIS PROJECT. VENUS WILL INSTEAD DOWNLOAD THE ZIP FILE FROM GITHUB AND UNZIP IT INTO THEIR CODEUP-WEB-EXERCISES PROJECT
 
-1. Clone the repo: git@github.com:CodeupClassroom/jalopy.git
+1. Clone the repo: https://github.com/CodeupClassroom/jalopy
 2. Change to the directory where you cloned the repo
 3. Remove its local .git folder: `rm -Rf .git`
 4. Create your own `jalopy` repo on Github
