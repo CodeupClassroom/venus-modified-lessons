@@ -9,7 +9,7 @@ In this lesson, we will a new screen/view component to our Jalopy project. The p
 5. go back to thew view component and add content/functionality to the screen
 
 ## Step 1: make the new view component file
-Let's add a new page that will display a single fact about dogs.
+Let's add a new page that will display a few facts about dogs.
 
 Create a new file: `views/DogFacts.js` with the following code:
 ```js
@@ -58,7 +58,7 @@ Run your application in the browser and view your handiwork! It should look some
 
 ## Step 5: add more content to the view component
 
-Finally, let's jazz up the Dog Facts screen by displaying a dog fact from https://dog-api.kinduff.com/api/facts?number=5
+Finally, let's jazz up the Dog Facts screen by displaying a dog fact from a dog facts API (which we will introduce in next lesson).
 
 Replace your `DogFactsView` function with this:
 ```js
@@ -71,6 +71,16 @@ export default function DogFactsView(props) {
             <p class="dog-fact">Humans generally see better than dogs, but dogs see much better when there is low-light.</p>
         </div>
     </div>
+    <div class="card">
+        <div class="card-body">
+            <p class="dog-fact">All dogs can be traced back 40 million years ago to a weasel-like animal called the Miacis which dwelled in trees and dens. The Miacis later evolved into the Tomarctus, a direct forbear of the genus Canis, which includes the wolf and jackal as well as the dog.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <p class="dog-fact">Small quantities of grapes and raisins can cause renal failure in dogs. Chocolate, macadamia nuts, cooked onions, or anything with caffeine can also be harmful.</p>
+        </div>
+    </div>
 </div>
 `;
 }
@@ -80,21 +90,38 @@ Check out your work!
 
 ## Adding some JavaScript
 
-Lastly, let's hide the fact and add a button. When the button is clicked, the fact will show itself. For convenience and brevity, we will use inline CSS to hide the fact. Here's the code for the entire `views/DogFacts.js`:
+Lastly, let's hide the facts and add a button. When the button is clicked, the fact will show itself. For convenience and brevity, we will use inline CSS to hide the fact. Below is the code for the entire `views/DogFacts.js`. Notice how we modularized out the code for generating the HTML for the dog facts into separate functions.
 
 ```js
 export default function DogFactsView(props) {
     return `
 <div class="container">
     <h1>Dog Facts</h1>
-    <div class="card">
-        <div class="card-body">
-            <p class="dog-fact" style="visibility: hidden">Humans generally see better than dogs, but dogs see much better when there is low-light.</p>
-        </div>
-    </div>
-    <button class="form-control" id="show-fact-btn">Show Fact</button>
+    
+    ${makeDogFactCards(props.dogFacts)}
+    
+    <button class="form-control" id="show-fact-btn">Show Facts</button>
+    <a data-link href="/insert-dog-fact">Insert Dog Fact</a>
 </div>
 `;
+}
+
+function makeDogFactCards(dogFacts) {
+    let html = "";
+    dogFacts.forEach(function(dogFact) {
+        html += makeDogFactCard(dogFact);
+    });
+    return html;
+}
+
+function makeDogFactCard(dogFact) {
+    return `
+<div class="card">
+    <div class="card-body">
+        <p class="dog-fact" style="visibility: hidden">${dogFact}</p>
+    </div>
+</div>
+        `;
 }
 
 export function DogFactsEvents() {
