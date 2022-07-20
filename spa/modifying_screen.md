@@ -156,27 +156,27 @@ Add a few aliases rules below the current `location`. The aliases tell nginx how
 
 ```
         location /dogs {
-                alias   /Users/markrobinson/ideaProjects/jalopy;
+                alias   <path to jalopy's index.html's directory>;
                 index  index.html index.htm;
         }
 
         location /about {
-                alias   /Users/markrobinson/ideaProjects/jalopy;
+                alias   <path to jalopy's index.html's directory>;
                 index  index.html index.htm;
         }
 
         location /quotes {
-                alias   /Users/markrobinson/ideaProjects/jalopy;
+                alias   <path to jalopy's index.html's directory>;
                 index  index.html index.htm;
         }
 
         location /register {
-                alias   /Users/markrobinson/ideaProjects/jalopy;
+                alias   <path to jalopy's index.html's directory>;
                 index  index.html index.htm;
         }
 
         location /login {
-                alias   /Users/markrobinson/ideaProjects/jalopy;
+                alias   <path to jalopy's index.html's directory>;
                 index  index.html index.htm;
         }
 ```
