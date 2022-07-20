@@ -149,7 +149,7 @@ Change the location of the web root:
 
 ```
 location / {
-	root	<path to jalopy's index.html>
+	root	<path to the directory where jalopy's index.html file lives>
 ```
 
 Add a few aliases rules below the current `location`. The aliases tell nginx how to route browser refreshes back to the Jalopy application's router.
