@@ -90,7 +90,7 @@ Check out your work!
 
 ## Touching up the HTML
 
-Next, let's hide the dog facts and add a button under the `p`s. Add the following inline style to the `p` elements:
+Next, let's hide the dog facts and add a button under the cards. Add the following inline style to the `p` elements:
 `style="visibility: hidden"`
 
 Add the following `button` element under the cards:
