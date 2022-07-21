@@ -88,15 +88,42 @@ export default function DogFactsView(props) {
 
 Check out your work!
 
-## Hiding the facts
+## Touching up the HTML
 
 Next, let's hide the dog facts and add a button under the `p`s. Add the following inline style to the `p` elements:
-` style="visibility: hidden"`
+`style="visibility: hidden"`
 
-Add the following `button` element under the `p`s:
+Add the following `button` element under the cards:
 `<button class="form-control" id="show-fact-btn">Show Facts</button>`
 
 Refresh the page and you should no longer see the fact text within the cards. You should also see a button below the cards.
+
+The touched up HTML function should now look like this:
+```js
+export default function DogFactsView(props) {
+    return `
+<div class="container">
+    <h1>Dog Facts</h1>
+    <div class="card">
+        <div class="card-body">
+            <p class="dog-fact" style="visibility: hidden">Humans generally see better than dogs, but dogs see much better when there is low-light.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <p class="dog-fact" style="visibility: hidden">All dogs can be traced back 40 million years ago to a weasel-like animal called the Miacis which dwelled in trees and dens. The Miacis later evolved into the Tomarctus, a direct forbear of the genus Canis, which includes the wolf and jackal as well as the dog.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <p class="dog-fact" style="visibility: hidden">Small quantities of grapes and raisins can cause renal failure in dogs. Chocolate, macadamia nuts, cooked onions, or anything with caffeine can also be harmful.</p>
+        </div>
+    </div>
+    <button class="form-control" id="show-fact-btn">Show Facts</button>
+</div>
+`;
+}
+```
 
 ## Adding some JavaScript
 
