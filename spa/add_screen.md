@@ -88,42 +88,21 @@ export default function DogFactsView(props) {
 
 Check out your work!
 
+## Hiding the facts
+
+Next, let's hide the dog facts and add a button under the `p`s. Add the following inline style to the `p` elements:
+` style="visibility: hidden"`
+
+Add the following `button` element under the `p`s:
+`<button class="form-control" id="show-fact-btn">Show Facts</button>`
+
+Refresh the page and you should no longer see the fact text within the cards. You should also see a button below the cards.
+
 ## Adding some JavaScript
 
-Lastly, let's hide the facts and add a button. When the button is clicked, the fact will show itself. For convenience and brevity, we will use inline CSS to hide the fact. Below is the code for the entire `views/DogFacts.js`. Notice how we modularized out the code for generating the HTML for the dog facts into separate functions.
+Lastly, when the button is clicked, the facts will show themselves. Below is the code for the entire `DogFactsEvents` function. 
 
 ```js
-export default function DogFactsView(props) {
-    return `
-<div class="container">
-    <h1>Dog Facts</h1>
-    
-    ${makeDogFactCards(props.dogFacts)}
-    
-    <button class="form-control" id="show-fact-btn">Show Facts</button>
-    <a data-link href="/insert-dog-fact">Insert Dog Fact</a>
-</div>
-`;
-}
-
-function makeDogFactCards(dogFacts) {
-    let html = "";
-    dogFacts.forEach(function(dogFact) {
-        html += makeDogFactCard(dogFact);
-    });
-    return html;
-}
-
-function makeDogFactCard(dogFact) {
-    return `
-<div class="card">
-    <div class="card-body">
-        <p class="dog-fact" style="visibility: hidden">${dogFact}</p>
-    </div>
-</div>
-        `;
-}
-
 export function DogFactsEvents() {
     const btn = document.querySelector("#show-fact-btn");
     btn.addEventListener("click", function(event) {
