@@ -148,9 +148,10 @@ Let's add a Quotes screen, where we will display quotes from famous people.
 1. create a new view component file called `views/Quotes.js`
 2. in `Quotes.js`, create an HTML function called `QuotesView` and a JS function called `QuotesEvents`. Remember to `export` both functions.
 3. add an entry in `router.js`. Remember to `import` both functions.
-4. in the `QuotesView` function, add an empty `<div>` or `<table>` in which you will use JS to add quotes. Give it an id of `my-quotes`
-5. in the `QuotesEvents` function, use JavaScript to dynamically add ALL of the below quotes to your `my-quotes` element (`div` or `table`). Format your quotes however you wish (e.g., striped table rows, Bootstrap cards, etc.). Encapsulate all of the functionality for adding a single quote to `my-quotes` in its own function called `addQuote`. This function can call other functions, if you wish.
-
+4. add an `a` in `Navbar.js` with a `/quotes` link
+5. in the `QuotesView` function, add an empty `<div>` or `<table>` in which you will use JS to add quotes. Give it an id of `my-quotes`
+6. in the `QuotesEvents` function, use JavaScript to dynamically add ALL of the below quotes to your `my-quotes` element (`div` or `table`). Format your quotes however you wish (e.g., striped table rows, Bootstrap cards, etc.). Encapsulate all of the functionality for adding a single quote to `my-quotes` in its own function called `addQuote`. This function can call other functions, if you wish.
+7. increment the version # to 0.0004. You earned it!
 
 ### Sample Quote Data
 
