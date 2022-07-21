@@ -141,6 +141,8 @@ export function DogFactsEvents() {
 }
 ```
 
+And increment that version # to 0.0004!
+
 ## Exercise
 
 Let's add a Quotes screen, where we will display quotes from famous people.
@@ -151,7 +153,7 @@ Let's add a Quotes screen, where we will display quotes from famous people.
 4. add an `a` in `Navbar.js` with a `/quotes` link
 5. in the `QuotesView` function, add an empty `<div>` or `<table>` in which you will use JS to add quotes. Give it an id of `my-quotes`
 6. in the `QuotesEvents` function, use JavaScript to dynamically add ALL of the below quotes to your `my-quotes` element (`div` or `table`). Format your quotes however you wish (e.g., striped table rows, Bootstrap cards, etc.). Encapsulate all of the functionality for adding a single quote to `my-quotes` in its own function called `addQuote`. This function can call other functions, if you wish.
-7. increment the version # to 0.0004. You earned it!
+7. increment the version # to 0.0005. You earned it!
 
 ### Sample Quote Data
 
