@@ -141,7 +141,7 @@ export function DogFactsEvents() {
 }
 ```
 
-And increment that version # to 0.0004!
+And increment the version # to 0.0004!
 
 ## Exercise
 
