@@ -135,7 +135,7 @@ export function DogFactsEvents() {
     btn.addEventListener("click", function(event) {
         const facts = document.querySelectorAll(".dog-fact");
         for (let i = 0; i < facts.length; i++) {
-            facts[i].style.visibility = "";
+            facts[i].style.visibility = "visible";
         }
     });
 }
