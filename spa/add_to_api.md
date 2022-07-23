@@ -9,9 +9,9 @@ Let's add a new screen for inserting a new dog fact. Before we jump right in, co
 2. a link on the Dog Fact screen
 3. a button on the Home page, etc.
 
-There is no one way to provide the user access to that functionality. There is only the right way for your particular user. In our application, we will add a  link at the bottom of the Dog Fact screen that will navigate our application to an Insert Dog Fact screen.
+There is no one right way to provide the user access to that functionality. There is only the way that best suits your particular application's users. In our application, we will add a link at the bottom of the Dog Fact screen that will navigate our application to an Insert Dog Fact screen.
 
-Add the following `<a>` to the bottom of your `DogFactsView` HTML function in `DogFacts.js`.
+Add the following `<a>` to the top OR bottom of your `DogFactsView` HTML function in `DogFacts.js`. Sometimes, I like my add "button" to be at the bottom of the list of records, and sometimes at the top.
 ```html
 <a data-link href="/insert-dog-fact">Insert Dog Fact</a>
 ```
@@ -53,8 +53,9 @@ and add a new routing entry:
     viewEvent: InsertDogFactEvents
 },
 ```
+Note that `state` remains an empty object for this screen. This is because we will not use Jalopy to automatically fetch data for this screen. We will instead use `fetch` in our screens JS function to `POST` the new dog fact to the API.
 
-Lastly, add an event listener for the "Insert Fact" button. When clicked, use `fetch` to POST the new fact to the API. In the JS function for the view, add this code:
+Add an event listener for the "Insert Fact" button. When clicked, use `fetch` to POST the new fact to the API. In the JS function for the view, add this code:
 
 ```js
 export function InsertDogFactEvents() {
@@ -88,3 +89,8 @@ Finally, we call the dog facts API and provide the request options. If the `fetc
 
 ## Exercise
 
+1. Create an Add Quote link or button on your Quotes screen that navigates the application to an `/addQuote` route.
+2. Create an AddQuote screen with a skeleton HTML function and JS function. You should also import `createView` at the top, like we did in the dog facts example.
+3. Update `router.js` to route `/addQuote` to the AddQuote screen.
+4. Build out the rest of the AddQuote screen, providing inputs for the quote AND the author. 
+5. In your event listener for adding a quote, you will need to create a JavaScript object representing the new quote, and then `JSON.stringify` that object into the body of the request (just as we did in the dog fact example above).
