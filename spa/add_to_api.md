@@ -100,7 +100,7 @@ const newQuote = {
     author: "the author's name or Anonymous"
 }
 ```
-Before stringification, place the object in an array (just like the dog facts example). Here is what your options could look like, assuming we have create a new quote object called `newQuote`.
+Before stringification, place the object in an array (just like the dog facts example). Here is what your options could look like, assuming we have created a new quote object called `newQuote`.
 ```js
 const requestOptions = {
             method: "POST",
