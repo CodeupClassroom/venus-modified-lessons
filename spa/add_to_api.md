@@ -94,7 +94,7 @@ Finally, we call the dog facts API and provide the request options. If the `fetc
 3. Update `router.js` to route `/addQuote` to the AddQuote screen.
 4. Build out the rest of the AddQuote screen, providing inputs for the quote AND the author. 
 5. In your event listener for adding a quote, you will need to create a JavaScript object representing the new quote, and then `JSON.stringify` that object into the body of the request (just as we did in the dog fact example above). 
-The new quote object should look like this:
+Prior to stringification, the new quote object should look like this:
 ```js
 {
     quote: "the text of the quote to add",
