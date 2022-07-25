@@ -44,7 +44,7 @@ TODO: DOM Intro
 
 [Single Page Applications](spa/index.md)
 
-[RESTful APIs and the Movies Application](https://java.codeup.com/javascript-ii/RESTful-api/)
+[RESTful APIs and the Movies Application](movies.md)
 
 
 ## Additional Resources
