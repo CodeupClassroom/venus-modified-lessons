@@ -30,4 +30,4 @@ https://java.codeup.com/javascript-ii/RESTful-api/
 
 ## The Movies Project
 
-Look in the above V2 link for the Movies project exercise description (scroll to the bottom)
+Look in the above V2 link for the Movies project description (scroll to the bottom)
