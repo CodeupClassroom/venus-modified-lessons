@@ -94,3 +94,6 @@ Finally, we call the dog facts API and provide the request options. If the `fetc
 3. Update `router.js` to route `/addQuote` to the AddQuote screen.
 4. Build out the rest of the AddQuote screen, providing inputs for the quote AND the author. 
 5. In your event listener for adding a quote, you will need to create a JavaScript object representing the new quote, and then `JSON.stringify` that object into the body of the request (just as we did in the dog fact example above).
+6. Humans are notorious for giving bad data! Validate the inputs. If the trimmed value of the author is an empty string, then save the author's name as "Anonymous". If the trimmed value of the quote is an empty string, then abort the save and tell the user that the quote cannot be blank. You can use Jalopy's `showNotification` function, if you wish. Don't use `console.log` to notify the user.
+7. Report all other errors trying to save the quote to the user. You can test this by intentionally misspelling the quotes API URL.
+8. If the quote saves successfully, redirect your screen by calling `createView` and returning to the `/quotes` screen.
