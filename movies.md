@@ -5,7 +5,7 @@ https://java.codeup.com/javascript-ii/RESTful-api/
 
 ## The Movies Project
 
-### Setup (only 1 teammate should do this)
+### A. Setup (only 1 teammate should do this)
 1. Create a GH organization (call it whatever you want)
 2. Invite the other teammate 
 3. Create a repo (movies-person1-person2)
@@ -16,7 +16,7 @@ https://java.codeup.com/javascript-ii/RESTful-api/
 8. Confirm a baseline of functionality (e.g., Home and/or About pages are showing)
 9. Add, commit, push
 
-### Setup (the other teammate)
+### B. Setup (the other teammate)
 1. Create a new IntelliJ project (select New from VCS in IntelliJ)
 2. Clone the project from your GH organization's repo
 
