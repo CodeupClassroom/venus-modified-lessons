@@ -2,7 +2,7 @@
 
 ## Definition
 
-Historically, whenever an end-user of a web application would click on a link to a new page of the application, or refresh data that have changed on the currently viewed page, the web server responsible for serving up the application would send the new page, or re-send the current page with the new data (use of cache notwithstanding). This is known as Multi-Page Application (MPA) design and it has a few drawbacks:
+Historically, whenever an end-user of a web application would click on a link to a new page of the application, or refresh data that have changed on the currently viewed page, the web server responsible for serving up the application would send the new page, or re-send the current page with the new data (use of cache notwithstanding) to the end-user's browser. This is known as Multi-Page Application (MPA) design and it has a few drawbacks:
 
 - the request for the new page and its response must travel over a network like the internet, which is very slow compared to other data storage like SSDs and RAM.
 - puts more load on the web server.
