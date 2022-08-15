@@ -19,10 +19,9 @@ even entire files!)
 - The waiting client receives the response, parses the data within, and takes some action
 
 It is important to understand that all of our Java code will reside
-*server-side* (as opposed to *client-side*, which is where our JavaScript runs). This means that a user visiting our
-website will not know that our server is running Java, just that when they ask for movies they get movies!
+*server-side* (as opposed to *client-side*, which is where our JavaScript runs). This means that a user visiting our website will not know that our server is running Java, just that when they ask for movies they get movies!
 
-In effect, we can use a Java application to create our *own* API! Luckily, a lot of the tedium of managing the request, like parsing the request and packaging the response will be handled by the Spring Boot framework. As with other good frameworks, the result is speeding up your development time.
+In effect, we can use a Java application to create our *own* API! Luckily, a lot of the tedium of managing the request, like parsing the request and packaging the response will be handled by the Spring Boot framework. As with other good frameworks, the result is a decrease in your development time.
 
 
 ---
