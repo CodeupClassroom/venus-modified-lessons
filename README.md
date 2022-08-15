@@ -47,6 +47,10 @@ TODO: DOM Intro
 [RESTful APIs and the Movies Application](movies.md)
 
 
+### BACKEND MODULE
+
+[The RESTful Blog](restblog/README.md)
+
 ## Additional Resources
 
 [jQuery](no_jquery/index.md)

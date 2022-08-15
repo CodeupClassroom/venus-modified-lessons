@@ -7,9 +7,9 @@ https://java.codeup.com/javascript-ii/RESTful-api/
 
 ### A. Setup (only 1 teammate should do this)
 1. Create a GH organization (call it whatever you want)
-2. Invite the other teammate 
-3. Create a repo (movies-person1-person2)
-4. Create a new IntelliJ project (movies-person1-person2)
+2. Invite the other teammate to the GH organization
+3. Create a repo (called "movies-person1-person2") under the organization
+4. Create a new IntelliJ project (called "movies-person1-person2")
 5. Connect the IntelliJ project to the GH repo
 6. Copy/create the .gitignore file
 7. Copy jalopy files into the new project
