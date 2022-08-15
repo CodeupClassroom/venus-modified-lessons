@@ -1,14 +1,14 @@
 # Spring
 
 In this section we will be learning how to work with the [Spring framework][1].
-Spring is an open source framework for building Java applications. We will primarily be looking at the web portion of the framework. We will be using [Spring Boot][2] to get a quicker start building a Spring application.
+Spring is an open source framework for building Java applications. We will primarily be looking at the web portion of the framework. We will be using [Spring Boot][2] to get a quicker start building a RESTful API and serving up a front-end web application.
 
 [1]: https://projects.spring.io/spring-framework/
 [2]: https://projects.spring.io/spring-boot/
 
 **By the end of this module, you should be able to:**
 
-- Create a web application with Spring Boot
+- Create a RESTful API with Spring Boot
 
 **Understand:**
 
