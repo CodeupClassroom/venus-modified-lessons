@@ -25,3 +25,4 @@ Swagger is an excellent tool which provides full documentation of exposed endpoi
 
 Or... you can use **Postman** for documentation and testing :)
 
+## Next Up: [A Spring Overview](./i-intro/1-overview.md)
