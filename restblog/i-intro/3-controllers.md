@@ -1,7 +1,5 @@
 # Controllers
 
-## TODO: remove this servlet stuff and introduce controllers maybe from the servlet lesson
-
 The word "controller" has a few definitions in software development. For a Spring Boot application, a controller is the component that:
 1. receives a request from a requestor (often an end-user's frontend browser application)
 2. calls on other classes to authenticate and/or authorize the request, if necessary
@@ -10,7 +8,21 @@ The word "controller" has a few definitions in software development. For a Sprin
 
 Thus, a Spring Boot controller is like a manager for the RESTful web services being requested. It is in charge of fulfilling the request, but is not supposed to handle the details directly. It instead delegates out the detailed work to other classes.
 
-Luckily, a lot of the tedium of managing the request, like parsing the request and packaging the response will be handled by the Spring Boot framework. As with other good frameworks, the result is speeding up your development time.
+![Request Response Pattern](./req_res.png)
+
+At a high level, most internet communication consists of requests and responses. It follows a very common pattern:
+- A client (perhaps an application running in your browser) makes
+a request to an endpoint on a URL
+  - `GET --> myMoviesApp.com/movies`
+- The server, listening for `GET` requests at `/movies` sends a response (JSON, plain text,
+even entire files!)
+- The waiting client receives the response, parses the data within, and takes some action
+
+It is important to understand that all of our Java code will reside
+*server-side* (as opposed to *client-side*, which is where our JavaScript runs). This means that a user visiting our
+website will not know that our server is running Java, just that when they ask for movies they get movies!
+
+In effect, we can use a Java application to create our *own* API! Luckily, a lot of the tedium of managing the request, like parsing the request and packaging the response will be handled by the Spring Boot framework. As with other good frameworks, the result is speeding up your development time.
 
 
 ---
