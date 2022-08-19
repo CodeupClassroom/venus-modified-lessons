@@ -7,12 +7,7 @@ In many web applications, there are often two main ideas:
 1. What basic function does our application perform?
 2. Who interacts with the application and what can they ask it to do?
 
-By creating a `Post` object and a controller to help perform CRUD, we nailed down #1:
-
-<span style="color:lightgreen; font-weight:bold">
-    Our application performs the functionality of 
-    creating, reading, updating, and deleting blog posts.
-</span>
+By creating a `Post` object and a controller to help perform CRUD, we nailed down #1: our application performs the functionality of creating, reading, updating, and deleting blog posts.
 
 Now, we need to fill out #2: **Who interacts with the application and what can they ask it to do?**
 
@@ -74,6 +69,24 @@ public class User {
     ;
 ```
 
+!!! 🧠 `enum`
+
+In programming, enums (or, enumerated values) represent constant values which share a common purpose.
+
+For example, for a Role enum, you may have DEVELOPER, QA, and MANAGER roles.
+
+In code, this would look like:
+
+  ```JAVA
+    enum Role {DEVELOPER, QA, MANAGER}
+  ```
+
+And could be invoked externally as:
+
+  ```JAVA
+    private Role role = Role.DEVELOPER;
+  ```
+
 #### 3. Create our standard POJO items:
 
 - Empty and full constructors
@@ -90,7 +103,7 @@ We can now set up a REST Controller for the purpose of running CRUD operations r
 #### 1. In the package `web`, create a class called `UsersController`.
 
 
-#### 2. While filling out the class, follow the same pattern as found in [Rest Controllers](6-rest-controllers.md) and [Rest Controllers, Pt II](7-rest-controllers.md).
+#### 2. While filling out the class, follow the same pattern as found in [REST Controllers](6-rest-controllers.md) and [REST Controllers, Part 2](7-rest-controllers.md).
    
 - You will need methods for `getAll`, `getById`, `create`, `update`, and `deleteById` with their respective annotations.
 
@@ -98,18 +111,16 @@ We can now set up a REST Controller for the purpose of running CRUD operations r
 - **Make sure the class' `@RequestMapping` value is set to `/api/users`**. IMPORTANT: register user needs a special endpoint `/api/users/create`
     
 
-- ***WARNING, be very careful if you copypasta***. It will be EASY for you to forget to replace one of those `Post` references
-      with `User` and waste your own time tracking down the issue.
+- ***WARNING, be very careful if you copypasta***. It will be EASY for you to forget to replace one of those `Post` references with `User` and waste your own time tracking down the issue.
 
 
-#### 3. Test test test
+#### 3. Test test test (with Swagger or Postman)
 
 ---
 
 ### US5-C: Register the `User` Client-Side
 
-`resources/static/js/views/Login.js`
-shows us how we can begin a view for creating users.
+`resources/static/js/views/Login.js` shows us how we can begin a view for creating users.
 
 #### 1. In `resources/static/js/views/`, create `Register.js`
 
@@ -187,5 +198,5 @@ Check the `UsersController` to see if your new User is printed out on your `POST
 
 *Looking forward, we need more than the ability to perform basic CRUD for our `User`.*
 
-## Next Up: [The User, pt II](8a-the-user-pt-2.md)
+## Next Up: [The User, Part 2](8a-the-user-pt-2.md)
 

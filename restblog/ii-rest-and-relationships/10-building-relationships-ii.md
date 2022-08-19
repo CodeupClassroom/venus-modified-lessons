@@ -1,7 +1,6 @@
-# Building Relationships, Pt II
+# Building Relationships, Part 2
 
-Now that we've bound Users and Posts together as a ***one-to-many*** relationship, let's think about binding our objects together in a ***many-to-many***
-relationship within our application.
+Now that we've bound Users and Posts together as a ***one-to-many*** relationship, let's think about binding our objects together in a ***many-to-many*** relationship within our application.
 
 ---
 ### The following are user stories to be implemented in your blog application
@@ -45,8 +44,7 @@ Its job is to provide the names of which categories *exist*.
 
 ## US9-B, US10-B: Create Many-to-Many Relationship between Posts and Categories
 
-It's time to bind our `Post` and `Category` objects together, but first we need to think about the relationship between
-the two.
+It's time to bind our `Post` and `Category` objects together, but first we need to think about the relationship between the two.
 
 **Unlike Users and Posts, this is going to need to be a ***many-to-many*** relationship**:
 
@@ -97,10 +95,10 @@ Now that we have this relationship established, let's expose endpoints to provid
 
 ## US10-D: Enable assignment of categories on the client-side
 
-## *¡Feel free to style up your frontend!*
+## *Feel free to style up your frontend!*
 
 ---
 
-## Next Up: [Data Persistence](../iii-data-persistence/12-data-persistence.md)
+## Next Up: [The data access layer](../iii-data-persistence/12-data-persistence.md)
 
 

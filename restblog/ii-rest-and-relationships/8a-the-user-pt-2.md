@@ -1,3 +1,5 @@
+# The User, Part 2
+
 ## US6: As a user, I can view, edit, and delete information about myself.
 
 ---

@@ -60,4 +60,4 @@ As with previous lessons, test these changes in **Swagger** and see if you can g
 
 ---
 
-##Next Up: [Building Relationships, Pt II](10-building-relationships-ii.md)
+## Next Up: [Building Relationships, Part 2](10-building-relationships-ii.md)
