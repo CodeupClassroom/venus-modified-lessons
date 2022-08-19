@@ -1,6 +1,8 @@
-# REST Blog
+# RESTful APIs using Spring (Boot)
 
-This project is a sandbox for a full-stack Single Page Application solution for a basic blogging app. The backend is Java+Spring and the frontend uses a custom SPA framework built by Codeup staff.
+This module combines learning how to use Spring to build a RESTful API as a backend solution for a fullstack application with a running fullstack project of a blogging application, the REST Blog. The REST Blog project is a sandbox for a full-stack Single Page Application solution for a basic blogging app. The backend is Java+Spring and the frontend uses the Jalopy framework, covered in the SPA module. 
+
+NOTE: future curriculum revisions will use Vue as the frontend framework.
 
 ## General Architecture
 
@@ -25,4 +27,12 @@ Swagger is an excellent tool which provides full documentation of exposed endpoi
 
 Or... you can use **Postman** for documentation and testing :)
 
-## Next Up: [A Spring Overview](./i-intro/1-overview.md)
+This module is divided into the following sub-modules:
+
+1. [Introduction](./i-intro/1-overview.md)
+2. [REST basics](./ii-rest-and-relationships/5-rest.md)
+3. [The data access layer](./iii-data-persistence/12-data-persistence.md)
+4. [The business layer](./iv-business-layer/1-overview.md)
+5. [The security layer](./v-security/1-overview.md)
+
+## Next Up: [Introduction to Spring](./i-intro/1-overview.md)
