@@ -32,7 +32,7 @@ This module is divided into the following sub-modules:
 1. [Introduction](./i-intro/1-overview.md)
 2. [REST basics](./ii-rest-and-relationships/5-rest.md)
 3. [The data access layer](./iii-data-persistence/12-data-persistence.md)
-4. [The business layer](./iv-business-layer/1-overview.md)
-5. [The security layer](./v-security/1-overview.md)
+4. [The business layer](./iv-business-layer/17-services.md)
+5. [The security layer](./v-security/18-intro-to-security.md)
 
 ## Next Up: [Introduction to Spring](./i-intro/1-overview.md)
