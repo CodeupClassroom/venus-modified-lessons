@@ -1,4 +1,4 @@
-# Alternate approach to delivery of the Security sub-module
+# Alternate delivery of the Security sub-module
 1. Read lessons: 
   - https://github.com/CodeupClassroom/venus-modified-lessons/blob/main/restblog/v-security/18-intro-to-security.md
   - https://github.com/CodeupClassroom/venus-modified-lessons/blob/main/restblog/v-security/19-implementing-oauth.md
