@@ -10,7 +10,7 @@ Congrats! You should have implemented the following user stories for your Bloggi
 
 ### US4: As a User, I can delete posts. (maps to F1)
 
-### US5: As a user, I can register with the application. (maps to F2)
+### US5: As an anonymous user, I can register with the application. (maps to F2)
 
 ### US6: As a user, I can view, edit, and delete information about myself. (maps to F2)
 
