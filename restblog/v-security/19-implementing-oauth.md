@@ -2,7 +2,7 @@
 
 ***PAY CLOSE ATTENTION*** to details in this lesson. Naming, placement, and ordering are paramount!
 
-**IMPORTANT:** You may need some additional classes in your `errors` package for this lesson. Please check with your instructor before proceeding!
+## **IMPORTANT:** You WILL need some additional classes in your `errors` package for this lesson. Please check with your instructor before proceeding!
 
 ---
 ### The following are user stories to be implemented in your application
@@ -19,6 +19,13 @@
 ### 1. Let's drop a few dependencies into our `pom.xml`:
 
 ```XML
+<!-- NEW DEPENDENCY FOR JDK > 11 -->
+<dependency>
+    <groupId>com.sun.xml.bind</groupId>
+    <artifactId>jaxb-impl</artifactId>
+    <version>3.1.0-M1</version>
+</dependency>
+
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-security</artifactId>
@@ -29,6 +36,7 @@
   <version>2.1.0.RELEASE</version>
 </dependency>
 ```
+**NOTE:** Ignore the vulnerability and deprecation warnings. 
 
 ### 2. Create a package named `security`
 
@@ -40,7 +48,6 @@
 - As well, it pulls the `Role` from our `User` in order to allow Spring Security to do Authorizations.
 
 ```JAVA
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -53,17 +60,20 @@ import java.util.Arrays;
 @Service
 public class UserService implements UserDetailsService {
 
-    private final UserRepository repository;
+    private final UsersRepository repository;
 
-    public UserService(UserRepository repository) {
+    public UserService(UsersRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = repository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found: " + email));
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+        User user = repository.findByUserName(userName);
+        if(user == null) {
+            throw new RuntimeException("User not found: " + userName);
+        }
         GrantedAuthority authority = new SimpleGrantedAuthority(user.getRole().name());
-        return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), Arrays.asList(authority));
+        return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getPassword(), Arrays.asList(authority));
     }
 }
 ```
