@@ -41,7 +41,8 @@
 	c. in create user, set the default role to USER
 
 	d. in create user and and change password, encrypt the password by calling:
-		passwordEncoder.encode(plainTextPassword);
+		
+		`passwordEncoder.encode(plainTextPassword);`
 
 		and save the encoded password to the db
 
