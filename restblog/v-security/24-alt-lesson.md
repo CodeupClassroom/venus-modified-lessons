@@ -27,6 +27,7 @@
 	d. checking out the access token in jwt.io
 
 	e. manually deleting the tokens in the browser
+	
 		i. try to go to the User information screen
 
 		ii. what do you expect to see?
