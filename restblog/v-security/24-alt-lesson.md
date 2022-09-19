@@ -40,11 +40,9 @@
 
 	c. in create user, set the default role to USER
 
-	d. in create user and and change password, encrypt the password by calling:
-		
-		`passwordEncoder.encode(plainTextPassword);`
+	d. in create user and and change password, encrypt the password by calling `passwordEncoder.encode(plainTextPassword);`
 
-		and save the encoded password to the db
+	and save the encoded password to the db
 
 5. change your /me endpoint to return the currently logged in user
 
