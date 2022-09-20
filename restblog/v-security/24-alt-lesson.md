@@ -16,7 +16,24 @@
 
 	NOTE: truncate does not work with the fk constraints :(
 
-3. 	Test and play around by:
+3. 	Encrypt the passwords when adding a new user or changing a user's password
+
+	a. register a new user. You will notice that the password stored in the database is not encrypted.
+	
+	b. try logging in with that user. You will receive a backend console message that the password is not BCrypt'ed. We must first encrypt the password before storing it in the database. This occurs in the create user method in the UsersController.
+	
+	c. in your UsersController, add a PasswordEncoder field
+
+	d. make sure the PasswordEncoder is injected by Spring
+
+	e. in create user, set the default role to USER
+
+	f. in create user and and change password, encrypt the password by calling `passwordEncoder.encode(plainTextPassword);`
+
+	and save the encoded password to the db
+
+
+4. 	Test and play around by:
 
 	a. registering a new user
 
@@ -31,18 +48,6 @@
 		i. try to go to the User information screen
 
 		ii. what do you expect to see?
-
-4. 	Encrypt the passwords when adding a new user or changing a user's password
-	
-	a. in your UsersController, add a PasswordEncoder field
-
-	b. make sure the PasswordEncoder is injected by Spring
-
-	c. in create user, set the default role to USER
-
-	d. in create user and and change password, encrypt the password by calling `passwordEncoder.encode(plainTextPassword);`
-
-	and save the encoded password to the db
 
 5. change your /me endpoint to return the currently logged in user
 
