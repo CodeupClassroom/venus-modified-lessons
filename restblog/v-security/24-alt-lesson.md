@@ -3,10 +3,10 @@
   - https://github.com/CodeupClassroom/venus-modified-lessons/blob/main/restblog/v-security/18-intro-to-security.md
   - https://github.com/CodeupClassroom/venus-modified-lessons/blob/main/restblog/v-security/19-implementing-oauth.md
 
-3. make the bulk changes for security as specified in:
+2. make the bulk changes for security as specified in:
 	https://github.com/CodeupClassroom/venus-modified-lessons/blob/main/restblog/v-security/19-implementing-oauth.md
 
-2. prep the db for security:
+3. prep the db for security:
 	
 	a. empty or drop post_category
 	
@@ -16,7 +16,7 @@
 
 	NOTE: truncate does not work with the fk constraints :(
 
-3. 	Encrypt the passwords when adding a new user or changing a user's password
+4. 	Encrypt the passwords when adding a new user or changing a user's password
 
 	a. register a new user via the frontend. You will notice that the password stored in the database is not encrypted.
 	
@@ -33,7 +33,7 @@
 	and save the encoded password to the db
 
 
-4. 	Test and play around by:
+5. 	Test and play around by:
 
 	a. registering a new user
 
@@ -49,7 +49,7 @@
 
 		ii. what do you expect to see?
 
-5. change your /me endpoint to return the currently logged in user
+6. change your /me endpoint to return the currently logged in user
 
 	a. add an OAuth2Authentication parameter to your endpoint's method. See this lesson for information about this parameter:
 https://github.com/CodeupClassroom/venus-modified-lessons/blob/main/restblog/v-security/21-using-auth-as-resource.md
@@ -61,7 +61,7 @@ https://github.com/CodeupClassroom/venus-modified-lessons/blob/main/restblog/v-s
 	d. test by logging in as different users and viewing the user info
 
 
-6. removing stale access tokens
+7. removing stale access tokens
 
 	a. login to the system
 
@@ -147,14 +147,14 @@ export default async function createView(URI) {
 	f. test!
 
 
-7. add the Authenticated User as the author of an added post
+8. add the Authenticated User as the author of an added post
 
 	a. in the frontend, when creating the POST and DELETE requests, create the headers by calling getHeaders() from auth.js
 
 	b. test by creating another login 
 		be sure to change USER to ADMIN for one of the logins in the database
 
-8. try to add a post as someone who is not logged in
+9. try to add a post as someone who is not logged in
 
 	a. in PostsController, add @PreAuthorize annotations to ADD DELETE and EDIT methods. See this lesson for more info:
   https://github.com/CodeupClassroom/venus-modified-lessons/blob/main/restblog/v-security/22-method-specific-access.md
@@ -163,12 +163,12 @@ export default async function createView(URI) {
 
 	b. test!
 
-9. add title and content validation for PostsController
+10. add title and content validation for PostsController
 	 a. in the ADD and UPDATE methods, if the title is null OR the length is < 1 then throw a 400 exception
 
 	 b. do the same for content
 
-10. make sure that only the author of the post OR an admin can delete or edit someone else's post
+11. make sure that only the author of the post OR an admin can delete or edit someone else's post
 
     a. add `OAuth2Authentication auth` as a parameter
 
