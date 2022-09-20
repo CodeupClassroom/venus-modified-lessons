@@ -18,7 +18,7 @@
 
 3. 	Encrypt the passwords when adding a new user or changing a user's password
 
-	a. register a new user. You will notice that the password stored in the database is not encrypted.
+	a. register a new user via the frontend. You will notice that the password stored in the database is not encrypted.
 	
 	b. try logging in with that user. You will receive a backend console message that the password is not BCrypt'ed. We must first encrypt the password before storing it in the database. This occurs in the create user method in the UsersController.
 	
