@@ -2,7 +2,7 @@
 
 Congrats! You should have implemented the following user stories for your Blogging Application:
 
-### US1: As a user, I can view any posts. (maps to F1)
+### US1: As an anonymous user, I can view any posts. (maps to F1)
 
 ### US2: As a User, I can create posts. (maps to F1)
 
