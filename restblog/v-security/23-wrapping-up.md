@@ -33,3 +33,6 @@ Congrats! You should have implemented the following user stories for your Bloggi
 ### US15: As an anonymous user, I can NOT create, edit, nor delete posts. (maps to F2)
 
 ### US16: As an ADMIN user, I have full access to create, edit, and delete any posts. (maps to F2)
+
+## Next Up: [Alternate delivery approach](24-alt-lesson.md)
+
