@@ -1,4 +1,4 @@
-# RESTful APIs using Spring (Boot)
+# RESTful APIs using Spring Boot
 
 This module combines learning how to use Spring to build a RESTful API as a backend solution for a fullstack application with a running fullstack project of a blogging application, the REST Blog. The REST Blog backend is Java+Spring and the frontend uses the Jalopy framework, covered in the SPA module. 
 
